@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/res/merged/F0F1/debug/drawable-mdpi/background.png",
+        "source": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/src/main/res/drawable-mdpi/background.png"
+    },
+    {
+        "merged": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/res/merged/F0F1/debug/drawable-mdpi/icon.png",
+        "source": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/src/main/res/drawable-mdpi/icon.png"
+    },
+    {
+        "merged": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/res/merged/F0F1/debug/drawable-mdpi/logo.png",
+        "source": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/src/main/res/drawable-mdpi/logo.png"
+    }
+]

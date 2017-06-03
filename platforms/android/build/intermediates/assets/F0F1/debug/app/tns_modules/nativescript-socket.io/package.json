@@ -1,0 +1,79 @@
+{
+  "_from": "nativescript-socket.io",
+  "_id": "nativescript-socket.io@0.5.1",
+  "_inBundle": false,
+  "_integrity": "sha1-nKTqS7Tx/Qr70SpLPrQzcsSpjw0=",
+  "_location": "/nativescript-socket.io",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "nativescript-socket.io",
+    "name": "nativescript-socket.io",
+    "escapedName": "nativescript-socket.io",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/nativescript-socket.io/-/nativescript-socket.io-0.5.1.tgz",
+  "_shasum": "9ca4ea4bb4f1fd0afbd12a4b3eb43372c4a98f0d",
+  "_spec": "nativescript-socket.io",
+  "_where": "/home/xlmnxp/Documents/Nativescript/ngChatClient",
+  "author": {
+    "name": "Nader Toukabri",
+    "email": "contact@nader.tn"
+  },
+  "bugs": {
+    "url": "https://github.com/naderio/nativescript-socket.io/issues"
+  },
+  "bundleDependencies": false,
+  "contributors": [
+    {
+      "name": "Ludovic Fabrèges",
+      "url": "https://github.com/lfabreges"
+    }
+  ],
+  "deprecated": false,
+  "description": "Socket.io implementation in NativeScript",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "karma": "^1.4.1",
+    "karma-chai": "^0.1.0",
+    "karma-mocha": "^1.3.0",
+    "karma-nativescript-launcher": "^0.4.0",
+    "mocha": "^3.2.0",
+    "tns-core-modules": "^2.5.2",
+    "typescript": "^2.1.6"
+  },
+  "homepage": "https://github.com/naderio/nativescript-socket.io#readme",
+  "keywords": [
+    "nativescript",
+    "socket.io",
+    "websocket",
+    "android",
+    "ios"
+  ],
+  "license": "Unlicense",
+  "main": "socket",
+  "name": "nativescript-socket.io",
+  "nativescript": {
+    "platforms": {
+      "ios": "2.0.0",
+      "android": "2.0.0"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/naderio/nativescript-socket.io.git"
+  },
+  "scripts": {
+    "build": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "typings": "socket.d.ts",
+  "version": "0.5.1"
+}

@@ -1,0 +1,7 @@
+@import "nativescript-theme-core/css/core.light.css";
+
+.message{
+    font-size: 21px;
+    margin-left: 3px;
+    margin-right: 3px;
+}

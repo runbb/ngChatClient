@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/support-media-compat/25.3.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="45f697922e6f072daa12f8a2995dc77ab03c11da">
+        <dex dex="/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/pre-dexed/F0F1/debug/com.android.support-support-media-compat-25.3.1_8c0a7953209ea3d2ba0712544f74e7b783289253.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/25.3.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="efb8cb62d47d157c29d1521daac7eefd4cb881ee">
+        <dex dex="/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/pre-dexed/F0F1/debug/com.android.support-support-vector-drawable-25.3.1_812e5c4d9f3bd980e3cbd0f9f52079faa23af688.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/xlmnxp/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp/3.5.0/4b0bb6bfbecbdd42b97ff400af342bfe7f32bc83/okhttp-3.5.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="4b0bb6bfbecbdd42b97ff400af342bfe7f32bc83">
+        <dex dex="/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/pre-dexed/F0F1/debug/okhttp-3.5.0_42b583e2e5c5577b4855b799f164460e31f65007.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/support-core-utils/25.3.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="6ef31f1555bb4cc513ec8d52711365a8b89f3600">
+        <dex dex="/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/pre-dexed/F0F1/debug/com.android.support-support-core-utils-25.3.1_40411bcc7efea53d1f375a324ad4bb78ad9ab87b.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/support-core-ui/25.3.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="052f5f840f21174a3ecf6544130194e2652cbb73">
+        <dex dex="/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/pre-dexed/F0F1/debug/com.android.support-support-core-ui-25.3.1_5940f9b5a1c30da18411d58c9cf8e66a456f3efd.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/xlmnxp/.gradle/caches/modules-2/files-2.1/io.socket/engine.io-client/0.8.3/854b49396e1e9f9bb0ab025062ddb49c4ed65ca1/engine.io-client-0.8.3.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="854b49396e1e9f9bb0ab025062ddb49c4ed65ca1">
+        <dex dex="/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/pre-dexed/F0F1/debug/engine.io-client-0.8.3_8948da127c175bb55f23a366edc05b274df4ce2c.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/support-fragment/25.3.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="4a26a1154d053ab11aaf4c3967c42a4d66390991">
+        <dex dex="/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/pre-dexed/F0F1/debug/com.android.support-support-fragment-25.3.1_e057ccdba4eab63782d5db1fbf7c0308cfafd004.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/xlmnxp/.gradle/caches/modules-2/files-2.1/com.squareup.okio/okio/1.11.0/840897fcd7223a8143f1d9b6f69714e7be34fd50/okio-1.11.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="840897fcd7223a8143f1d9b6f69714e7be34fd50">
+        <dex dex="/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/pre-dexed/F0F1/debug/okio-1.11.0_aa9526081adc4462f3b5a52141d5810c689328f1.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/transition/25.3.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="d4cf6227dd6a2ceff0f7dcf0c324380b7abf2c28">
+        <dex dex="/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/pre-dexed/F0F1/debug/com.android.support-transition-25.3.1_55280a080f1f2cff92ccf746e2c6861ba6049bd9.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/support-compat/25.3.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="da27a32db6af8954ee8061537c7d476fcb1df46f">
+        <dex dex="/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/pre-dexed/F0F1/debug/com.android.support-support-compat-25.3.1_35f708530bdca86199bc83b22c1dcdda17a779a6.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/support-v4/25.3.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/pre-dexed/F0F1/debug/com.android.support-support-v4-25.3.1_fba659a727b5eff33512f9b0cbd4807296f5bc1d.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/design/25.3.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="38789e20ace9ab7dbd00554bd2673ab424478d3b">
+        <dex dex="/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/pre-dexed/F0F1/debug/com.android.support-design-25.3.1_60a875f0c6bad1ee87d53a9c6366e61f1bdf8fce.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/widgets-release/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="ed69cd5603304a6fc9a36a94c8be977a1d0e4857">
+        <dex dex="/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/pre-dexed/F0F1/debug/intermediates-exploded-aar-widgets-release_6362ca7765b32d00209da7564f4bfc010cb57451.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/chatclient/runtime/unspecified/jars/libs/binding-generator.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="d82f3ca98719f09b65db6aeaf450ad3bafc46e81">
+        <dex dex="/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/pre-dexed/F0F1/debug/binding-generator_8d26836786567b491454d202ba4a320491e6747f.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/25.3.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="47635644d0d5c103c1dd8360549eb9ba3225c7d3">
+        <dex dex="/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/pre-dexed/F0F1/debug/com.android.support-animated-vector-drawable-25.3.1_8f22257c8a10ba3f71c9eff446f8812a2077c547.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="150252b33b00274cc868578ade018fda0d43a3eb">
+        <dex dex="/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/pre-dexed/F0F1/debug/com.android.support-appcompat-v7-25.3.1_ccabf966ef378ef6e41889f970da313c8a6f0858.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/chatclient/runtime/unspecified/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="cb501f7cf4d74a5f9ec1a9c8172e552f57ea3215">
+        <dex dex="/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/pre-dexed/F0F1/debug/chatclient-runtime-unspecified_dfae8140a1e91b42b26611afe53e7e6725cd876a.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/xlmnxp/.gradle/caches/modules-2/files-2.1/io.socket/socket.io-client/0.8.3/b30500232ff0668a47c9f91f02e6935457a52fb5/socket.io-client-0.8.3.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="b30500232ff0668a47c9f91f02e6935457a52fb5">
+        <dex dex="/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/pre-dexed/F0F1/debug/socket.io-client-0.8.3_dedaafc6f30c4b49892d23603d15f0c68f8f9745.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/25.3.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="95519720620b553f63afc789beba9ad582807f7c">
+        <dex dex="/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/pre-dexed/F0F1/debug/com.android.support-recyclerview-v7-25.3.1_54d1dcb4bb08475cd7a2ba4c52ac11f828e23eba.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/xlmnxp/Android/Sdk/extras/android/m2repository/com/android/support/support-annotations/25.3.1/support-annotations-25.3.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="bf8841d29fa39e077730e7a91222c2ce269fa7c9">
+        <dex dex="/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/pre-dexed/F0F1/debug/support-annotations-25.3.1_c993c3464366c3da6adebf273083552a551ca0da.jar" />
+    </item>
+
+</items>

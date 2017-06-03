@@ -1,0 +1,1 @@
+/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/src/main/assets/app/app.component.js
