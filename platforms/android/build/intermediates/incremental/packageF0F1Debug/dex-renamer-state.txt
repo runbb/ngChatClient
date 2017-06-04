@@ -1,4 +1,4 @@
-#Fri Jun 02 19:42:07 AST 2017
+#Sun Jun 04 18:44:03 AST 2017
 base.0=/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/transforms/dex/F0F1/debug/folders/1000/1f/main
 renamed.0=classes.dex
 file.0=/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/transforms/dex/F0F1/debug/folders/1000/1f/main/classes.dex

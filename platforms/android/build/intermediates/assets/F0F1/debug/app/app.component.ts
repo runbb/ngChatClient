@@ -1,8 +1,11 @@
 import { Component } from "@angular/core";
 import { connect,SocketOptions } from "nativescript-socket.io";
-import { Page } from "ui/page"
-import { ListView } from "ui/list-view"
-import { TextField } from "ui/text-field"
+import { Page } from "ui/page";
+import { ListView } from "ui/list-view";
+import { TextField } from "ui/text-field";
+import { TabViewItem } from "ui/tab-view";
+import { setTimeout } from 'timer'
+import dialogs = require("ui/dialogs");
 import _ = require("underscore");
 declare var NSIndexPath,UITableViewScrollPosition,unescape;
 
@@ -28,10 +31,14 @@ export class AppComponent {
   public broadcasts: Array<Message>;
   public notifications: Array<Notification>;
   public users: Array<any>;
+  public user: any;
+  public rooms: Array<any>;
+  public room: any;
   public powers: Array<any>;
   public server: string = "http://khaleejchat.com/";
 
   private socket;
+  public userid: string;
   private connection_name: string = "Android Application";
   constructor(public page:Page){
     this.messages = [];
@@ -39,6 +46,7 @@ export class AppComponent {
     this.users = [];
     this.powers = [];
     this.broadcasts = [];
+    this.rooms = [];
   }
 
   connection(){
@@ -47,11 +55,18 @@ export class AppComponent {
     var password:TextField = <TextField> this.page.getViewById("password");
     this.server = server.text;
     
+    this.messages = [];
+    this.notifications = [];
+    this.users = [];
+    this.powers = [];
+    this.broadcasts = [];
+    this.rooms = []; 
+
     this.socket = connect(this.server, <SocketOptions> { transports: ['polling', 'websocket'] });
     this.socket.on('connect', () => {
-      var listview:ListView = <ListView> this.page.getViewById("listNotifications");
-      this.notifications.unshift(new Notification('','تم الاتصال بنجاح'));
-      listview.refresh();
+      var notifications:ListView = <ListView> this.page.getViewById("listNotifications");
+      this.notifications.unshift(new Notification(this.server + 'pic.png','تم الاتصال بنجاح'));
+      notifications.refresh();
 
       this.socket.emit('msg', {cmd: "login" , data:{
         username: username.text,
@@ -62,51 +77,153 @@ export class AppComponent {
         r: this.connection_name
       }});
     });
+
     this.socket.on('msg', (data) => {
       if(typeof data.data === "string" && data.cmd != 'u-'){
           data.data = JSON.parse(unescape(data.data));
       }
 
+      if(data.cmd == "login"){ // on login to server
+        if(data.data.msg = "ok"){
+          this.userid = data.data.id;
+        }
+      }
+
       if(data.cmd == "msg"){ // room message 
-        var listview:ListView = <ListView> this.page.getViewById("listMessages");
-        
+        var messages:ListView = <ListView> this.page.getViewById("listMessages");
+        var sico = '';
         var user = this.users.filter(value => value.id == data.data.uid)[0];
         var power = this.powers.filter(value => {
           if(user) { 
             return value.name == user.power;
           } else { return false}
         })[0];
+        if(power){
+          if(power.ico != ''){
+            sico = this.server + "sico/" + power.ico;
+          }
+        }
 
+        if(data.data.bg == "#"){
+          data.data.bg = "#FFFFFF";
+        }
+
+        if(data.data.ucol == "#"){
+          data.data.ucol = "#000000";
+        }
+
+        if(data.data.mcol == "#"){
+          data.data.mcol = "#000000";
+        }
+        
         data.data.bg    = data.data.bg   || '#FFFFFF';
         data.data.ucol  = data.data.ucol || '#000000';
         data.data.mcol  = data.data.mcol || '#000000';
-        this.messages.push( new Message(this.server + data.data.pic, (power ? this.server + "sico/" + power.ico : ''), _unescape(data.data.topic), _unescape(data.data.msg.replace(/<\/?[^>]+(>|$)/g, ""))
+
+        this.messages.push( new Message(this.server + data.data.pic, sico, _unescape(data.data.topic), _unescape(data.data.msg.replace(/<\/?[^>]+(>|$)/g, ""))
                                         , data.data.bg, data.data.ucol, data.data.mcol) );
-        listview.refresh();  
+        messages.refresh();  
         
-        if (listview.ios) {
-            listview.ios.scrollToRowAtIndexPathAtScrollPositionAnimated(
+        if (messages.ios) {
+            messages.ios.scrollToRowAtIndexPathAtScrollPositionAnimated(
                 NSIndexPath.indexPathForItemInSection(this.messages.length-1, 0),
                 UITableViewScrollPosition.UITableViewScrollPositionTop,
                 true
             );
         }
         else {
-            listview.scrollToIndex(this.messages.length-1); 
+            messages.scrollToIndex(this.messages.length-1); 
         }
       }
 
       if (data.cmd == "not"){ // notifications
-        var listview:ListView = <ListView> this.page.getViewById("listNotifications");
+        var notifications:ListView = <ListView> this.page.getViewById("listNotifications");
         var user = this.users.filter(value => value.id == data.data.user)[0] || { pic: "" };
-        this.notifications.unshift(new Notification(this.server+user.pic,_unescape(data.data.msg.replace(/<\/?[^>]+(>|$)/g, ""))));
-        listview.refresh();
+        this.notifications.unshift(new Notification(this.server+ user.pic,_unescape(data.data.msg.replace(/<\/?[^>]+(>|$)/g, ""))));
+        notifications.refresh();
       }
 
       if(data.cmd == "ulist"){ // users online
-        var listview:ListView = <ListView> this.page.getViewById("listonline");
-        this.users = data.data;
-        listview.refresh();
+        var onlines:ListView = <ListView> this.page.getViewById("listOnline");
+        data.data.forEach(element => {
+          if(element.bg == "#"){
+            element.bg = "#FFFFFF";
+          }
+
+          if(element.ucol == "#"){
+            element.ucol = "#000000";
+          }
+
+          if(element.mcol == "#"){
+            element.mcol = "#000000";
+          }
+          
+          element.bg    = element.bg   || '#FFFFFF';
+          element.ucol  = element.ucol || '#000000';
+          element.mcol  = element.mcol || '#000000';
+
+          this.users.push(element);          
+        });
+        onlines.refresh();
+      }
+
+      if(data.cmd == "u-"){ // user left
+        var onlines:ListView = <ListView> this.page.getViewById("listOnline");
+        var rooms:ListView = <ListView> this.page.getViewById("listRooms");
+        this.users.splice(this.users.indexOf(this.users.filter(v => v.id == data.data)[0]), 1);
+        onlines.refresh();
+        rooms.refresh();
+      }
+
+      if(data.cmd == "u+"){ // user join
+        var onlines:ListView = <ListView> this.page.getViewById("listOnline");
+        var rooms:ListView = <ListView> this.page.getViewById("listRooms");
+        
+        if(data.data.bg == "#"){
+          data.data.bg = "#FFFFFF";
+        }
+
+        if(data.data.ucol == "#"){
+          data.data.ucol = "#000000";
+        }
+
+        if(data.data.mcol == "#"){
+          data.data.mcol = "#000000";
+        }
+        
+        data.data.bg    = data.data.bg   || '#FFFFFF';
+        data.data.ucol  = data.data.ucol || '#000000';
+        data.data.mcol  = data.data.mcol || '#000000';
+        this.users.push(data.data);
+        onlines.refresh();
+        rooms.refresh();
+      }
+
+      if(data.cmd == "u^"){ // user edit
+        var onlines:ListView = <ListView> this.page.getViewById("listOnline");
+        var rooms:ListView = <ListView> this.page.getViewById("listRooms");
+        this.users.splice(this.users.indexOf(this.users.filter(v => v.id == data.data.id)[0]), 1);
+        this.users.push(data.data);
+        onlines.refresh();
+        rooms.refresh();
+      }
+
+      if(data.cmd == "ur"){ // user join room
+        if(this.rooms == [] || this.users == []){
+          return;
+        }
+
+        var onlines:ListView = <ListView> this.page.getViewById("listOnline");
+        var rooms:ListView = <ListView> this.page.getViewById("listRooms");
+        var user = this.users[this.users.indexOf(this.users.filter(v => v.id == data.data[0])[0])];
+        if (user == undefined){
+          user = {
+            roomid: ''
+          }
+        }
+        user.roomid = data.data[1];
+        onlines.refresh();
+        rooms.refresh();
       }
 
       if(data.cmd == "powers"){ // powers
@@ -120,8 +237,8 @@ export class AppComponent {
       }
 
       if(data.cmd == 'bc'){ // broadcast
-        var listview:ListView = <ListView> this.page.getViewById("listBroadcast");
-        
+        var broadcasts:ListView = <ListView> this.page.getViewById("listBroadcast");
+        var sico = '';
         var user = this.users.filter(value => value.id == data.data.uid)[0];
         var power = this.powers.filter(value => {
           if(user) { 
@@ -129,69 +246,169 @@ export class AppComponent {
           } else { return false}
         })[0];
 
+        if(power){
+          if(power.ico != ''){
+            sico = this.server + "sico/" + power.ico;
+          }
+        }
+
+        if(data.data.bg == "#"){
+          data.data.bg = "#FFFFFF";
+        }
+
+        if(data.data.ucol == "#"){
+          data.data.bg = "#FFFFFF";
+        }
+
+        if(data.data.mcol == "#"){
+          data.data.bg = "#FFFFFF";
+        }
+
         data.data.bg    = data.data.bg   || '#FFFFFF';
         data.data.ucol  = data.data.ucol || '#000000';
         data.data.mcol  = data.data.mcol || '#000000';
-        this.broadcasts.unshift( new Message(this.server + data.data.pic, (power ? this.server + "sico/" + power.ico : ''), _unescape(data.data.topic), _unescape(data.data.msg.replace(/<\/?[^>]+(>|$)/g, ""))
+        this.broadcasts.unshift( new Message(this.server + data.data.pic, sico, _unescape(data.data.topic), _unescape(data.data.msg.replace(/<\/?[^>]+(>|$)/g, ""))
                                         , data.data.bg, data.data.ucol, data.data.mcol) );
-        listview.refresh();  
+        broadcasts.refresh();  
         
-        if (listview.ios) {
-            listview.ios.scrollToRowAtIndexPathAtScrollPositionAnimated(
+        if (broadcasts.ios) {
+            broadcasts.ios.scrollToRowAtIndexPathAtScrollPositionAnimated(
                 NSIndexPath.indexPathForItemInSection(0, 0),
                 UITableViewScrollPosition.UITableViewScrollPositionTop,
                 true
             );
         }
         else {
-            listview.scrollToIndex(0);
+            broadcasts.scrollToIndex(0);
         }
-      } 
+      }
+
+      if(data.cmd == "rlist"){ // rooms list
+        var rooms:ListView = <ListView> this.page.getViewById("listRooms");
+        data.data.forEach(element => {
+          element.online = 0;
+          this.rooms.push(element);          
+        });
+        rooms.refresh();
+        this.updateRooms();
+      }
+
+      if(data.cmd == "r+"){ // add room
+        var rooms:ListView = <ListView> this.page.getViewById("listRooms");
+        this.rooms.push(data.data);
+        rooms.refresh();
+      }
+
+      if(data.cmd == "r-"){ // remove room
+        var rooms:ListView = <ListView> this.page.getViewById("listRooms");
+        this.rooms.splice(this.rooms.indexOf(this.rooms.filter(v => v.id == data.data.id)[0]), 1);
+        rooms.refresh();
+      }
+
+      if(data.cmd == "r^"){ // room edit
+        var rooms:ListView = <ListView> this.page.getViewById("listRooms");
+        this.rooms.splice(this.rooms.indexOf(this.rooms.filter(v => v.id == data.data.id)[0]), 1);
+        this.rooms.push(data.data);
+        rooms.refresh();
+      }
     });
 
     this.socket.on('disconnect', (data) => { 
-      var listview:ListView = <ListView> this.page.getViewById("listNotifications");
-      this.notifications.unshift(new Notification('','اوه لا !! انقطع الاتصال'));
-      listview.refresh();
+      var notifications:ListView = <ListView> this.page.getViewById("listNotifications");
+      this.notifications.unshift(new Notification(this.server + 'pic.png','اوه لا !! انقطع الاتصال'));
+      notifications.refresh();
     });
     this.socket.on('connect_error', (data) => {
-      var listview:ListView = <ListView> this.page.getViewById("listNotifications");
-      this.notifications.unshift(new Notification('','اوه لا !! خطأ في الاتصال'));
-      listview.refresh();  
+      var notifications:ListView = <ListView> this.page.getViewById("listNotifications");
+      this.notifications.unshift(new Notification(this.server + 'pic.png','اوه لا !! خطأ في الاتصال'));
+      notifications.refresh();  
     });
     this.socket.on('connect_timeout', (data) => { 
-      var listview:ListView = <ListView> this.page.getViewById("listNotifications");
-      this.notifications.unshift(new Notification('','اوه لا !! لا يمكنني الاتصال بالخادم'));
-      listview.refresh();
+      var notifications:ListView = <ListView> this.page.getViewById("listNotifications");
+      this.notifications.unshift(new Notification(this.server + 'pic.png','اوه لا !! لا يمكنني الاتصال بالخادم'));
+      notifications.refresh();
     });
     this.socket.on('reconnect_attempt', (data) => { 
-      var listview:ListView = <ListView> this.page.getViewById("listNotifications");
-      this.notifications.unshift(new Notification('','انا اقوم باعادة الاتصال بالخادم الان'));
-      listview.refresh();
+      var notifications:ListView = <ListView> this.page.getViewById("listNotifications");
+      this.notifications.unshift(new Notification(this.server + 'pic.png','انا اقوم باعادة الاتصال بالخادم الان'));
+      notifications.refresh();
     });
     this.socket.on('error', (data) => { 
-      var listview:ListView = <ListView> this.page.getViewById("listNotifications");
-      this.notifications.unshift(new Notification('','اوه لا !! حدث خطأ ما'));
-      listview.refresh();
+      var notifications:ListView = <ListView> this.page.getViewById("listNotifications");
+      this.notifications.unshift(new Notification(this.server + 'pic.png','اوه لا !! حدث خطأ ما'));
+      notifications.refresh();
     });
 
+  }
+
+  sendAdvertising(){
+    dialogs.prompt("إرسال إهلان", "").then(r => {
+        if(r.result){ // on press ok
+          // send Advertising
+          this.socket.emit("msg", {cmd: "pmsg", data: { msg: r.text }});
+        }
+    });
   }
 
   onItemTap(evt){
     
   }
 
-  sendMessage(){
+  joinRoom(event,roomid){ // join room
+    // join room                                room id
+    this.socket.emit("msg",{cmd:"rjoin", data: {id: this.rooms.filter(v => v.id == roomid)[0].id } });
+  };
+
+  sendMessage(){ // send message to user room
+    // get message input
     var textfield:TextField= <TextField> this.page.getViewById("messageinput");
+    // when textfield is blank dont send anything
     if(textfield.text.trim() == "") return;
+    // send message
     this.socket.emit("msg",{cmd:"msg", data: {msg: textfield.text} });
+    // set textfield blank
     textfield.text = "";
   }
 
-  sendBroadcast(){
+  sendBroadcast(){ // send broadscast
+    //get broadcast input
     var textfield:TextField= <TextField> this.page.getViewById("broadcastinput");
+    // when textfield is blank dont send anything
     if(textfield.text.trim() == "") return;
+    // send broadcast
     this.socket.emit("msg",{cmd:"bc", data: { msg: textfield.text, link: null } });
+    // set textfield blank
     textfield.text = "";
+  }
+
+  sendInfo(){
+    // this.user = this.users.filter((value,index) => value.id == this.userid)[0];
+    // this.room = this.rooms.filter(v => v.id == this.user.roomid)[0];
+    //
+    // alert(JSON.stringify(this.user,null,4) + "\n" + JSON.stringify(this.room,null,4));
+  }
+
+  updateRooms (rooms?:ListView){ // refresh room online users
+    if(rooms == null){
+      rooms = <ListView> this.page.getViewById("listRooms");      
+    }
+
+    this.rooms.sort((a, b) => b.online - a.online );
+
+    this.rooms.forEach((element,index)=>{
+      var usersRoom = this.users.filter(v => v.roomid == element.id);
+      this.rooms[index].online = usersRoom.length;
+    });
+
+    rooms.refresh()
+    
+    setTimeout(()=>{
+      var tabNotifications:TabViewItem = <TabViewItem>this.page.getViewById("tabNotifications");
+      var tabOnline:TabViewItem = <TabViewItem>this.page.getViewById("tabOnlines");
+      tabNotifications.title = "الأشعارات " + this.notifications.length;
+      tabOnline.title = "المتصلين " + this.users.length;
+
+      this.updateRooms(rooms);
+    },1000);
   }
 }

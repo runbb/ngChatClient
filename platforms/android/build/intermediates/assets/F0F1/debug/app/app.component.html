@@ -1,4 +1,10 @@
-<ActionBar title="My App"></ActionBar>
+<ActionBar title="دردشة الخليج">
+    <ActionItem (tap)="sendAdvertising()"
+      text="ارسال اعلان" android.position="popup"></ActionItem>
+
+    <ActionItem (tap)="sendInfo()"
+      text="معلوماتي" android.position="popup"></ActionItem>
+</ActionBar>
 
 <TabView selectedIndex="0">
     <StackLayout *tabItem="{title: 'الدخول',  iconSource: 'res://logo_white_bg'}">
@@ -12,7 +18,7 @@
     </StackLayout>
     <GridLayout rows="*,50" *tabItem="{title: 'الدردشة', iconSource: 'res://logo_white_bg'}">
         <ListView row="0" id="listMessages" [items]="messages" >
-            <template let-item="item">
+            <ng-template let-item="item">
                 <StackLayout>
                     <GridLayout columns="50,auto,*" style="vertical-align: center;">
                         <image col="0" class="message" [src]='item.avatar' height="50"></image>
@@ -21,7 +27,7 @@
                     </GridLayout>
                     <label [text]='item.message' textWrap="true" class="btn message" [style]='"color:" + item.messageColor + ";"'></label>
                 </StackLayout>
-            </template>
+            </ng-template>
         </ListView>
         <GridLayout row="1" columns="100,*">
             <button col="0" text="ارسال" (tap)="sendMessage()"></button>
@@ -34,7 +40,7 @@
             <TextField  col="1" id="broadcastinput" returnKeyType="send"  (returnPress)="sendBroadcast()" height="100"></TextField>
         </GridLayout>
         <ListView row="1" id="listBroadcast" [items]="broadcasts" >
-            <template let-item="item">
+            <ng-template let-item="item">
                 <StackLayout>
                     <GridLayout columns="50,auto,*" style="vertical-align: center;">
                         <image col="0" class="message" [src]='item.avatar' height="50"></image>
@@ -43,24 +49,40 @@
                     </GridLayout>
                     <label [text]='item.message' textWrap="true" class="btn message" [style]='"color:" + item.messageColor + ";"'></label>
                 </StackLayout>
-            </template>
+            </ng-template>
         </ListView>
     </GridLayout>
-    <StackLayout rows="*" *tabItem="{title: 'الأشعارات', iconSource: 'res://logo_white_bg'}">
+    <StackLayout rows="*" id="tabNotifications" *tabItem="{title: 'الأشعارات ' + notifications.length, iconSource: 'res://logo_white_bg'}">
         <ListView row="0" id="listNotifications" [items]="notifications" >
-            <template let-item="item">
+            <ng-template let-item="item">
                 <StackLayout>
                     <GridLayout columns="50,*" rows="*">
                         <image row="0" col="0" class="message" [src]='item.image' height="50"></image>
                         <label row="0" col="1" textWrap="true" [text]='item.message' textWrap="true" class="message" style="vertical-align: center;text-align: center;"></label>
                     </GridLayout>
                 </StackLayout>
-            </template>
+            </ng-template>
         </ListView>
     </StackLayout>
-    <GridLayout rows="*" *tabItem="{title: 'المتصلين', iconSource: 'res://logo_white_bg'}">
-        <ListView row="0" id="listonline" [items]="users" >
-            <template let-item="item">
+    <GridLayout rows="*" *tabItem="{title: 'الغرف', iconSource: 'res://logo_white_bg'}">
+        <ListView row="0" id="listRooms" [items]="rooms">
+            <ng-template let-item="item" let-i="index">
+                <GridLayout columns="100,*">
+                    <image col="0" class="message" [src]='server+item.pic' height="100"></image>
+                    <GridLayout col="1" rows="*,*">
+                        <GridLayout row="0" columns="*,auto">
+                            <button col="0" [text]='item.topic' (tap)='joinRoom($event,item.id)'></button>                            
+                            <label  col="1" [text]='item.online + " / " + item.max' class="message" style='vertical-align: center;'></label>
+                        </GridLayout>
+                        <label  row="1" [text]='item.about' textWrap="true" class="message"></label>
+                    </GridLayout>
+                </GridLayout>
+            </ng-template>
+        </ListView>
+    </GridLayout>
+    <GridLayout rows="*" id="tabOnlines" *tabItem="{title: 'المتصلين ' + users.length, iconSource: 'res://logo_white_bg'}">
+        <ListView row="0" id="listOnline" [items]="users" >
+            <ng-template let-item="item">
                 <StackLayout>
                     <GridLayout columns="50,*">
                         <image col="0" class="message" [src]='server+item.pic' height="50"></image>
@@ -68,7 +90,7 @@
                     </GridLayout>
                     <label [text]='item.msg' textWrap="true" class="message" [style]='"color:" + item.mcol + ";"'></label>
                 </StackLayout>
-            </template>
+            </ng-template>
         </ListView>
     </GridLayout>
 </TabView>
