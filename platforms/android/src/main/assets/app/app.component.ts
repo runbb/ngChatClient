@@ -3,6 +3,7 @@ import { connect,SocketOptions } from "nativescript-socket.io";
 import { Page } from "ui/page";
 import { ListView } from "ui/list-view";
 import { TextField } from "ui/text-field";
+import { TabViewItem } from "ui/tab-view";
 import { setTimeout } from 'timer'
 import dialogs = require("ui/dialogs");
 import _ = require("underscore");
@@ -169,7 +170,7 @@ export class AppComponent {
       if(data.cmd == "u-"){ // user left
         var onlines:ListView = <ListView> this.page.getViewById("listOnline");
         var rooms:ListView = <ListView> this.page.getViewById("listRooms");
-        this.users.splice(this.users.indexOf(this.users.filter(v => v.id = data.data)[0]), 1);
+        this.users.splice(this.users.indexOf(this.users.filter(v => v.id == data.data)[0]), 1);
         onlines.refresh();
         rooms.refresh();
       }
@@ -198,13 +199,29 @@ export class AppComponent {
         rooms.refresh();
       }
 
+      if(data.cmd == "u^"){ // user edit
+        var onlines:ListView = <ListView> this.page.getViewById("listOnline");
+        var rooms:ListView = <ListView> this.page.getViewById("listRooms");
+        this.users.splice(this.users.indexOf(this.users.filter(v => v.id == data.data.id)[0]), 1);
+        this.users.push(data.data);
+        onlines.refresh();
+        rooms.refresh();
+      }
+
       if(data.cmd == "ur"){ // user join room
         if(this.rooms == [] || this.users == []){
           return;
         }
+
         var onlines:ListView = <ListView> this.page.getViewById("listOnline");
         var rooms:ListView = <ListView> this.page.getViewById("listRooms");
-        (this.users[this.users.indexOf(this.users.filter(v => v.id = data.data[0])[0])] || { roomid: '' }).roomid = data.data[1];
+        var user = this.users[this.users.indexOf(this.users.filter(v => v.id == data.data[0])[0])];
+        if (user == undefined){
+          user = {
+            roomid: ''
+          }
+        }
+        user.roomid = data.data[1];
         onlines.refresh();
         rooms.refresh();
       }
@@ -274,6 +291,25 @@ export class AppComponent {
         });
         rooms.refresh();
         this.updateRooms();
+      }
+
+      if(data.cmd == "r+"){ // add room
+        var rooms:ListView = <ListView> this.page.getViewById("listRooms");
+        this.rooms.push(data.data);
+        rooms.refresh();
+      }
+
+      if(data.cmd == "r-"){ // remove room
+        var rooms:ListView = <ListView> this.page.getViewById("listRooms");
+        this.rooms.splice(this.rooms.indexOf(this.rooms.filter(v => v.id == data.data.id)[0]), 1);
+        rooms.refresh();
+      }
+
+      if(data.cmd == "r^"){ // room edit
+        var rooms:ListView = <ListView> this.page.getViewById("listRooms");
+        this.rooms.splice(this.rooms.indexOf(this.rooms.filter(v => v.id == data.data.id)[0]), 1);
+        this.rooms.push(data.data);
+        rooms.refresh();
       }
     });
 
@@ -348,7 +384,7 @@ export class AppComponent {
   sendInfo(){
     // this.user = this.users.filter((value,index) => value.id == this.userid)[0];
     // this.room = this.rooms.filter(v => v.id == this.user.roomid)[0];
-
+    //
     // alert(JSON.stringify(this.user,null,4) + "\n" + JSON.stringify(this.room,null,4));
   }
 
@@ -356,13 +392,22 @@ export class AppComponent {
     if(rooms == null){
       rooms = <ListView> this.page.getViewById("listRooms");      
     }
+
+    this.rooms.sort((a, b) => b.online - a.online );
+
     this.rooms.forEach((element,index)=>{
       var usersRoom = this.users.filter(v => v.roomid == element.id);
       this.rooms[index].online = usersRoom.length;
     });
+
     rooms.refresh()
     
     setTimeout(()=>{
+      var tabNotifications:TabViewItem = <TabViewItem>this.page.getViewById("tabNotifications");
+      var tabOnline:TabViewItem = <TabViewItem>this.page.getViewById("tabOnlines");
+      tabNotifications.title = "الأشعارات " + this.notifications.length;
+      tabOnline.title = "المتصلين " + this.users.length;
+
       this.updateRooms(rooms);
     },1000);
   }

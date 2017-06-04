@@ -52,7 +52,7 @@
             </ng-template>
         </ListView>
     </GridLayout>
-    <StackLayout rows="*" *tabItem="{title: 'الأشعارات', iconSource: 'res://logo_white_bg'}">
+    <StackLayout rows="*" id="tabNotifications" *tabItem="{title: 'الأشعارات ' + notifications.length, iconSource: 'res://logo_white_bg'}">
         <ListView row="0" id="listNotifications" [items]="notifications" >
             <ng-template let-item="item">
                 <StackLayout>
@@ -80,7 +80,7 @@
             </ng-template>
         </ListView>
     </GridLayout>
-    <GridLayout rows="*" *tabItem="{title: 'المتصلين', iconSource: 'res://logo_white_bg'}">
+    <GridLayout rows="*" id="tabOnlines" *tabItem="{title: 'المتصلين ' + users.length, iconSource: 'res://logo_white_bg'}">
         <ListView row="0" id="listOnline" [items]="users" >
             <ng-template let-item="item">
                 <StackLayout>
