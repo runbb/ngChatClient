@@ -62,10 +62,10 @@
     <color name="notification_action_color_filter">#ffffffff</color>
     <color name="notification_icon_bg_color">#ff9e9e9e</color>
     <color name="notification_material_background_media_default_color">#ff424242</color>
-    <color name="ns_accent">#58a5f0</color>
-    <color name="ns_blue">#58a5f0</color>
-    <color name="ns_primary">#536dfe</color>
-    <color name="ns_primaryDark">#0043ca</color>
+    <color name="ns_accent">#ff8a50</color>
+    <color name="ns_blue">#ff8a50</color>
+    <color name="ns_primary">#ff5722</color>
+    <color name="ns_primaryDark">#c41c00</color>
     <color name="primary_dark_material_dark">@android:color/black</color>
     <color name="primary_dark_material_light">@color/material_grey_600</color>
     <color name="primary_material_dark">@color/material_grey_900</color>

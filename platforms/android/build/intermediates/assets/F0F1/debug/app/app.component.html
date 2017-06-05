@@ -1,4 +1,4 @@
-<ActionBar title="دردشة الخليج">
+<ActionBar class="action-bar" title="دردشة الخليج">
     <ActionItem (tap)="sendAdvertising()"
       text="ارسال اعلان" android.position="popup"></ActionItem>
 
@@ -6,8 +6,8 @@
       text="معلوماتي" android.position="popup"></ActionItem>
 </ActionBar>
 
-<TabView selectedIndex="0">
-    <StackLayout *tabItem="{title: 'الدخول',  iconSource: 'res://logo_white_bg'}">
+<TabView class="tab-view" selectedIndex="0">
+    <StackLayout class="tab-view" *tabItem="{title: 'الدخول',  iconSource: 'res://logo_white_bg'}">
         <label text="الخادم" class="message"></label>
         <TextField id="serverip" [text]="server" class="message"></TextField>
         <label text="اسم المستخدم" class="message"></label>
@@ -16,7 +16,7 @@
         <TextField id="password" text="" secure="true" class="message"></TextField>
         <button text="تسجيل الدخول" (tap)="connection()"></button>
     </StackLayout>
-    <GridLayout rows="*,50" *tabItem="{title: 'الدردشة', iconSource: 'res://logo_white_bg'}">
+    <GridLayout class="tab-view" rows="*,50" *tabItem="{title: 'الدردشة', iconSource: 'res://logo_white_bg'}">
         <ListView row="0" id="listMessages" [items]="messages" >
             <ng-template let-item="item">
                 <StackLayout>
@@ -34,7 +34,7 @@
             <TextField  col="1" id="messageinput" returnKeyType="send"  (returnPress)="sendMessage()" height="100"></TextField>
         </GridLayout>
     </GridLayout>
-    <GridLayout rows="50,*" *tabItem="{title: 'الحائط', iconSource: 'res://logo_white_bg'}">
+    <GridLayout class="tab-view" rows="50,*" *tabItem="{title: 'الحائط', iconSource: 'res://logo_white_bg'}">
         <GridLayout row="0" columns="100,*">
             <button col="0" text="ارسال" (tap)="sendBroadcast()"></button>
             <TextField  col="1" id="broadcastinput" returnKeyType="send"  (returnPress)="sendBroadcast()" height="100"></TextField>
@@ -52,7 +52,7 @@
             </ng-template>
         </ListView>
     </GridLayout>
-    <StackLayout rows="*" id="tabNotifications" *tabItem="{title: 'الأشعارات ' + notifications.length, iconSource: 'res://logo_white_bg'}">
+    <StackLayout class="tab-view" rows="*" id="tabNotifications" *tabItem="{title: 'الأشعارات ' + notifications.length, iconSource: 'res://logo_white_bg'}">
         <ListView row="0" id="listNotifications" [items]="notifications" >
             <ng-template let-item="item">
                 <StackLayout>
@@ -64,7 +64,7 @@
             </ng-template>
         </ListView>
     </StackLayout>
-    <GridLayout rows="*" *tabItem="{title: 'الغرف', iconSource: 'res://logo_white_bg'}">
+    <GridLayout rows="*" class="tab-view" *tabItem="{title: 'الغرف', iconSource: 'res://logo_white_bg'}">
         <ListView row="0" id="listRooms" [items]="rooms">
             <ng-template let-item="item" let-i="index">
                 <GridLayout columns="100,*">
@@ -80,13 +80,14 @@
             </ng-template>
         </ListView>
     </GridLayout>
-    <GridLayout rows="*" id="tabOnlines" *tabItem="{title: 'المتصلين ' + users.length, iconSource: 'res://logo_white_bg'}">
+    <GridLayout rows="*" class="tab-view" id="tabOnlines" *tabItem="{title: 'المتصلين ' + users.length, iconSource: 'res://logo_white_bg'}">
         <ListView row="0" id="listOnline" [items]="users" >
             <ng-template let-item="item">
                 <StackLayout>
-                    <GridLayout columns="50,*">
+                    <GridLayout columns="50,auto,*">
                         <image col="0" class="message" [src]='server+item.pic' height="50"></image>
-                        <button col="1" [text]='item.topic' class="btn" [style]='"background-color:" + item.bg + ";color:" + item.ucol + ";"'></button>
+                        <image col="1" [src]='item.sico' height="25" width="auto"></image>
+                        <button col="2" [text]='item.topic' class="btn" [style]='"background-color:" + item.bg + ";color:" + item.ucol + ";"'></button>
                     </GridLayout>
                     <label [text]='item.msg' textWrap="true" class="message" [style]='"color:" + item.mcol + ";"'></label>
                 </StackLayout>

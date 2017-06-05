@@ -5,12 +5,17 @@ import { ListView } from "ui/list-view";
 import { TextField } from "ui/text-field";
 import { TabViewItem } from "ui/tab-view";
 import { setTimeout } from 'timer'
+
+import * as application from "application";
+import * as platform from "platform";
+
 import dialogs = require("ui/dialogs");
 import _ = require("underscore");
-declare var NSIndexPath,UITableViewScrollPosition,unescape;
+
+declare var NSIndexPath,UITableViewScrollPosition,unescape,android;
 
 class Message{
-  constructor(public avatar:string, public power:string,public from:string,public message:string,
+  constructor(public avatar:string, public power:string,public dr3:string,public from:string,public message:string,
               public background:string,public color:string,public messageColor:string){}
 }
 
@@ -54,13 +59,6 @@ export class AppComponent {
     var username:TextField = <TextField> this.page.getViewById("username");
     var password:TextField = <TextField> this.page.getViewById("password");
     this.server = server.text;
-    
-    this.messages = [];
-    this.notifications = [];
-    this.users = [];
-    this.powers = [];
-    this.broadcasts = [];
-    this.rooms = []; 
 
     this.socket = connect(this.server, <SocketOptions> { transports: ['polling', 'websocket'] });
     this.socket.on('connect', () => {
@@ -103,6 +101,8 @@ export class AppComponent {
             sico = this.server + "sico/" + power.ico;
           }
         }
+        
+        data.data.ico = (user || {ico:''}).ico || '';
 
         if(data.data.bg == "#"){
           data.data.bg = "#FFFFFF";
@@ -115,12 +115,20 @@ export class AppComponent {
         if(data.data.mcol == "#"){
           data.data.mcol = "#000000";
         }
-        
-        data.data.bg    = data.data.bg   || '#FFFFFF';
-        data.data.ucol  = data.data.ucol || '#000000';
-        data.data.mcol  = data.data.mcol || '#000000';
 
-        this.messages.push( new Message(this.server + data.data.pic, sico, _unescape(data.data.topic), _unescape(data.data.msg.replace(/<\/?[^>]+(>|$)/g, ""))
+        data.data.bg    = data.data.bg    || '#FFFFFF';
+        data.data.bg    = data.data.bg.replace(/\/|\\/,'');
+        data.data.ucol  = data.data.ucol  || '#000000';
+        data.data.ucol  = data.data.ucol.replace(/\/|\\/,'');
+        data.data.mcol  = data.data.mcol  || '#000000';
+        data.data.mcol  = data.data.mcol.replace(/\/|\\/,'');
+        
+                
+        if(this.messages.length > 100){
+          this.messages.shift();
+        }
+
+        this.messages.push( new Message(this.server + data.data.pic, sico, data.data.ico != '' ? this.server + "dro3/" + data.data.ico : '', _unescape(data.data.topic), _unescape(data.data.msg.replace(/<\/?[^>]+(>|$)/g, ""))
                                         , data.data.bg, data.data.ucol, data.data.mcol) );
         messages.refresh();  
         
@@ -146,6 +154,17 @@ export class AppComponent {
       if(data.cmd == "ulist"){ // users online
         var onlines:ListView = <ListView> this.page.getViewById("listOnline");
         data.data.forEach(element => {
+          var sico = '';
+          var power = this.powers.filter(value => {
+              return value.name == element.power;
+          })[0];
+
+          if(power){
+            if(power.ico != ''){
+              sico = this.server + "sico/" + power.ico;
+            }
+          }
+
           if(element.bg == "#"){
             element.bg = "#FFFFFF";
           }
@@ -158,13 +177,23 @@ export class AppComponent {
             element.mcol = "#000000";
           }
           
-          element.bg    = element.bg   || '#FFFFFF';
-          element.ucol  = element.ucol || '#000000';
-          element.mcol  = element.mcol || '#000000';
+          element.ico = (element || {ico:''}).ico || '';
+
+          element.bg    = element.bg    || '#FFFFFF';
+          element.bg    = element.bg.replace(/\/|\\/,'');
+          element.ucol  = element.ucol  || '#000000';
+          element.ucol  = element.ucol.replace(/\/|\\/,'');
+          element.mcol  = element.mcol  || '#000000';
+          element.mcol  = element.mcol.replace(/\/|\\/,'');
+
+          element.sico  = sico;
+
+          data.data.dico = data.data.ico != '' ? this.server + "dro3/" + data.data.ico : '';
 
           this.users.push(element);          
         });
         onlines.refresh();
+        this.updateUsers(onlines);
       }
 
       if(data.cmd == "u-"){ // user left
@@ -179,6 +208,19 @@ export class AppComponent {
         var onlines:ListView = <ListView> this.page.getViewById("listOnline");
         var rooms:ListView = <ListView> this.page.getViewById("listRooms");
         
+        var sico = '';
+        var power = this.powers.filter(value => {
+            return value.name == data.data.power;
+        })[0];
+
+        if(power){
+          if(power.ico != ''){
+            sico = this.server + "sico/" + power.ico;
+          }
+        }
+
+        data.data.ico = (data.data || {ico:''}).ico || '';                
+
         if(data.data.bg == "#"){
           data.data.bg = "#FFFFFF";
         }
@@ -191,9 +233,16 @@ export class AppComponent {
           data.data.mcol = "#000000";
         }
         
-        data.data.bg    = data.data.bg   || '#FFFFFF';
-        data.data.ucol  = data.data.ucol || '#000000';
-        data.data.mcol  = data.data.mcol || '#000000';
+        data.data.bg    = data.data.bg    || '#FFFFFF';
+        data.data.bg    = data.data.bg.replace(/\/|\\/,'');
+        data.data.ucol  = data.data.ucol  || '#000000';
+        data.data.ucol  = data.data.ucol.replace(/\/|\\/,'');
+        data.data.mcol  = data.data.mcol  || '#000000';
+        data.data.mcol  = data.data.mcol.replace(/\/|\\/,'');
+
+        data.data.dico = data.data.ico != '' ? this.server + "dro3/" + data.data.ico : '';
+
+        data.data.sico  = sico;
         this.users.push(data.data);
         onlines.refresh();
         rooms.refresh();
@@ -203,6 +252,42 @@ export class AppComponent {
         var onlines:ListView = <ListView> this.page.getViewById("listOnline");
         var rooms:ListView = <ListView> this.page.getViewById("listRooms");
         this.users.splice(this.users.indexOf(this.users.filter(v => v.id == data.data.id)[0]), 1);
+        var sico = '';
+        var power = this.powers.filter(value => {
+            return value.name == data.data.power;
+        })[0];
+
+        if(power){
+          if(power.ico != ''){
+            sico = this.server + "sico/" + power.ico;
+          }
+        }
+
+        data.data.ico = (data.data || {ico:''}).ico || '';                
+
+        if(data.data.bg == "#"){
+          data.data.bg = "#FFFFFF";
+        }
+
+        if(data.data.ucol == "#"){
+          data.data.ucol = "#000000";
+        }
+
+        if(data.data.mcol == "#"){
+          data.data.mcol = "#000000";
+        }
+        
+        data.data.bg    = data.data.bg    || '#FFFFFF';
+        data.data.bg    = data.data.bg.replace(/\/|\\/,'');
+        data.data.ucol  = data.data.ucol  || '#000000';
+        data.data.ucol  = data.data.ucol.replace(/\/|\\/,'');
+        data.data.mcol  = data.data.mcol  || '#000000';
+        data.data.mcol  = data.data.mcol.replace(/\/|\\/,'');
+
+        data.data.dico = data.data.ico != '' ? this.server + "dro3/" + data.data.ico : '';
+
+        data.data.sico  = sico;
+
         this.users.push(data.data);
         onlines.refresh();
         rooms.refresh();
@@ -252,6 +337,8 @@ export class AppComponent {
           }
         }
 
+        data.data.ico = (user || {ico:''}).ico || '';
+
         if(data.data.bg == "#"){
           data.data.bg = "#FFFFFF";
         }
@@ -264,10 +351,19 @@ export class AppComponent {
           data.data.bg = "#FFFFFF";
         }
 
-        data.data.bg    = data.data.bg   || '#FFFFFF';
-        data.data.ucol  = data.data.ucol || '#000000';
-        data.data.mcol  = data.data.mcol || '#000000';
-        this.broadcasts.unshift( new Message(this.server + data.data.pic, sico, _unescape(data.data.topic), _unescape(data.data.msg.replace(/<\/?[^>]+(>|$)/g, ""))
+        data.data.bg    = data.data.bg    || '#FFFFFF';
+        data.data.bg    = data.data.bg.replace(/\/|\\/,'');
+        data.data.ucol  = data.data.ucol  || '#000000';
+        data.data.ucol  = data.data.ucol.replace(/\/|\\/,'');
+        data.data.mcol  = data.data.mcol  || '#000000';
+        data.data.mcol  = data.data.mcol.replace(/\/|\\/,'');
+        
+                
+        if(this.broadcasts.length > 100){
+          this.broadcasts.shift();
+        }
+
+        this.broadcasts.unshift( new Message(this.server + data.data.pic, sico, data.data.ico != '' ? this.server + "dro3/" + data.data.ico : '', _unescape(data.data.topic), _unescape(data.data.msg.replace(/<\/?[^>]+(>|$)/g, ""))
                                         , data.data.bg, data.data.ucol, data.data.mcol) );
         broadcasts.refresh();  
         
@@ -314,26 +410,51 @@ export class AppComponent {
     });
 
     this.socket.on('disconnect', (data) => { 
+      this.messages = [];
+      this.users = [];
+      this.powers = [];
+      this.broadcasts = [];
+      this.rooms = []; 
       var notifications:ListView = <ListView> this.page.getViewById("listNotifications");
       this.notifications.unshift(new Notification(this.server + 'pic.png','اوه لا !! انقطع الاتصال'));
       notifications.refresh();
     });
     this.socket.on('connect_error', (data) => {
+      this.messages = [];
+      this.users = [];
+      this.powers = [];
+      this.broadcasts = [];
+      this.rooms = []; 
       var notifications:ListView = <ListView> this.page.getViewById("listNotifications");
       this.notifications.unshift(new Notification(this.server + 'pic.png','اوه لا !! خطأ في الاتصال'));
       notifications.refresh();  
     });
     this.socket.on('connect_timeout', (data) => { 
+      this.messages = [];
+      this.users = [];
+      this.powers = [];
+      this.broadcasts = [];
+      this.rooms = []; 
       var notifications:ListView = <ListView> this.page.getViewById("listNotifications");
       this.notifications.unshift(new Notification(this.server + 'pic.png','اوه لا !! لا يمكنني الاتصال بالخادم'));
       notifications.refresh();
     });
     this.socket.on('reconnect_attempt', (data) => { 
+      this.messages = [];
+      this.users = [];
+      this.powers = [];
+      this.broadcasts = [];
+      this.rooms = []; 
       var notifications:ListView = <ListView> this.page.getViewById("listNotifications");
       this.notifications.unshift(new Notification(this.server + 'pic.png','انا اقوم باعادة الاتصال بالخادم الان'));
       notifications.refresh();
     });
     this.socket.on('error', (data) => { 
+      this.messages = [];
+      this.users = [];
+      this.powers = [];
+      this.broadcasts = [];
+      this.rooms = []; 
       var notifications:ListView = <ListView> this.page.getViewById("listNotifications");
       this.notifications.unshift(new Notification(this.server + 'pic.png','اوه لا !! حدث خطأ ما'));
       notifications.refresh();
@@ -381,11 +502,12 @@ export class AppComponent {
     textfield.text = "";
   }
 
-  sendInfo(){
+  showInfo(){
     // this.user = this.users.filter((value,index) => value.id == this.userid)[0];
     // this.room = this.rooms.filter(v => v.id == this.user.roomid)[0];
     //
     // alert(JSON.stringify(this.user,null,4) + "\n" + JSON.stringify(this.room,null,4));
+    alert( "Messages Length: " + this.messages.length + "\nBroadcasts Length: " + this.broadcasts.length );
   }
 
   updateRooms (rooms?:ListView){ // refresh room online users
@@ -409,6 +531,41 @@ export class AppComponent {
       tabOnline.title = "المتصلين " + this.users.length;
 
       this.updateRooms(rooms);
+    },1000);
+  }
+  updateUsers (users?:ListView){ // refresh room online users
+    if(users == null){
+      users = <ListView> this.page.getViewById("listOnline");      
+    }
+
+    this.users.sort((a, b) => {
+      if(b.rep == undefined || b.rep == undefined){
+        return;
+      }
+      return b.rep - a.rep;
+    } );
+
+    this.users.forEach((element,index)=>{
+      var sico = '';
+      var power = this.powers.filter(value => {
+          return value.name == this.users[index].power;
+      })[0];
+
+      if(power){
+        if(power.ico != ''){
+          sico = this.server + "sico/" + power.ico;
+        }
+      }
+      this.users[index].ico = (this.users[index] || {ico:''}).ico || '';
+      this.users[index].dico = this.users[index].ico != '' ? this.server + "dro3/" + this.users[index].ico : '';
+      this.users[index].sico = sico;
+
+    });
+
+    users.refresh()
+    
+    setTimeout(()=>{
+      this.updateUsers(users);
     },1000);
   }
 }

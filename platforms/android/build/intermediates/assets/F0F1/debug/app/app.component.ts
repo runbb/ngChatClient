@@ -5,9 +5,14 @@ import { ListView } from "ui/list-view";
 import { TextField } from "ui/text-field";
 import { TabViewItem } from "ui/tab-view";
 import { setTimeout } from 'timer'
+
+import * as application from "application";
+import * as platform from "platform";
+
 import dialogs = require("ui/dialogs");
 import _ = require("underscore");
-declare var NSIndexPath,UITableViewScrollPosition,unescape;
+
+declare var NSIndexPath,UITableViewScrollPosition,unescape,android;
 
 class Message{
   constructor(public avatar:string, public power:string,public from:string,public message:string,
@@ -116,10 +121,13 @@ export class AppComponent {
           data.data.mcol = "#000000";
         }
         
-        data.data.bg    = data.data.bg   || '#FFFFFF';
-        data.data.ucol  = data.data.ucol || '#000000';
-        data.data.mcol  = data.data.mcol || '#000000';
-
+        data.data.bg    = data.data.bg    || '#FFFFFF';
+        data.data.bg    = data.data.bg.replace(/\/|\\/,'');
+        data.data.ucol  = data.data.ucol  || '#000000';
+        data.data.ucol  = data.data.ucol.replace(/\/|\\/,'');
+        data.data.mcol  = data.data.mcol  || '#000000';
+        data.data.mcol  = data.data.mcol.replace(/\/|\\/,'');
+        
         this.messages.push( new Message(this.server + data.data.pic, sico, _unescape(data.data.topic), _unescape(data.data.msg.replace(/<\/?[^>]+(>|$)/g, ""))
                                         , data.data.bg, data.data.ucol, data.data.mcol) );
         messages.refresh();  
@@ -146,6 +154,20 @@ export class AppComponent {
       if(data.cmd == "ulist"){ // users online
         var onlines:ListView = <ListView> this.page.getViewById("listOnline");
         data.data.forEach(element => {
+          var sico = '';
+          var user = this.users.filter(value => value.id == element.id)[0];
+          var power = this.powers.filter(value => {
+            if(user) { 
+              return value.name == user.power;
+            }else{ return false;}
+          })[0];
+
+          if(power){
+            if(power.ico != ''){
+              sico = this.server + "sico/" + power.ico;
+            }
+          }
+
           if(element.bg == "#"){
             element.bg = "#FFFFFF";
           }
@@ -158,9 +180,14 @@ export class AppComponent {
             element.mcol = "#000000";
           }
           
-          element.bg    = element.bg   || '#FFFFFF';
-          element.ucol  = element.ucol || '#000000';
-          element.mcol  = element.mcol || '#000000';
+          element.bg    = element.bg    || '#FFFFFF';
+          element.bg    = element.bg.replace(/\/|\\/,'');
+          element.ucol  = element.ucol  || '#000000';
+          element.ucol  = element.ucol.replace(/\/|\\/,'');
+          element.mcol  = element.mcol  || '#000000';
+          element.mcol  = element.mcol.replace(/\/|\\/,'');
+
+          element.sico  = sico;
 
           this.users.push(element);          
         });
@@ -179,6 +206,20 @@ export class AppComponent {
         var onlines:ListView = <ListView> this.page.getViewById("listOnline");
         var rooms:ListView = <ListView> this.page.getViewById("listRooms");
         
+        var sico = '';
+        var user = this.users.filter(value => value.id == data.data.id)[0];
+        var power = this.powers.filter(value => {
+          if(user) { 
+            return value.name == user.power;
+          } else { return false}
+        })[0];
+
+        if(power){
+          if(power.ico != ''){
+            sico = this.server + "sico/" + power.ico;
+          }
+        }
+
         if(data.data.bg == "#"){
           data.data.bg = "#FFFFFF";
         }
@@ -191,9 +232,14 @@ export class AppComponent {
           data.data.mcol = "#000000";
         }
         
-        data.data.bg    = data.data.bg   || '#FFFFFF';
-        data.data.ucol  = data.data.ucol || '#000000';
-        data.data.mcol  = data.data.mcol || '#000000';
+        data.data.bg    = data.data.bg    || '#FFFFFF';
+        data.data.bg    = data.data.bg.replace(/\/|\\/,'');
+        data.data.ucol  = data.data.ucol  || '#000000';
+        data.data.ucol  = data.data.ucol.replace(/\/|\\/,'');
+        data.data.mcol  = data.data.mcol  || '#000000';
+        data.data.mcol  = data.data.mcol.replace(/\/|\\/,'');
+
+        data.data.sico  = sico;
         this.users.push(data.data);
         onlines.refresh();
         rooms.refresh();
@@ -264,9 +310,13 @@ export class AppComponent {
           data.data.bg = "#FFFFFF";
         }
 
-        data.data.bg    = data.data.bg   || '#FFFFFF';
-        data.data.ucol  = data.data.ucol || '#000000';
-        data.data.mcol  = data.data.mcol || '#000000';
+        data.data.bg    = data.data.bg    || '#FFFFFF';
+        data.data.bg    = data.data.bg.replace(/\/|\\/,'');
+        data.data.ucol  = data.data.ucol  || '#000000';
+        data.data.ucol  = data.data.ucol.replace(/\/|\\/,'');
+        data.data.mcol  = data.data.mcol  || '#000000';
+        data.data.mcol  = data.data.mcol.replace(/\/|\\/,'');
+        
         this.broadcasts.unshift( new Message(this.server + data.data.pic, sico, _unescape(data.data.topic), _unescape(data.data.msg.replace(/<\/?[^>]+(>|$)/g, ""))
                                         , data.data.bg, data.data.ucol, data.data.mcol) );
         broadcasts.refresh();  
