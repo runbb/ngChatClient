@@ -1,30 +1,31 @@
-<ActionBar class="action-bar" title="دردشة الخليج">
-    <ActionItem (tap)="sendAdvertising()"
+<ActionBar class="action-bar" [title]="connect.app_name">
+    <ActionItem *ngIf="connect.connected | async" (tap)="sendAdvertising()"
       text="ارسال اعلان" android.position="popup"></ActionItem>
 
-    <ActionItem (tap)="showInfo()"
+    <ActionItem *ngIf="connect.connected | async" (tap)="showInfo()"
       text="معلوماتي" android.position="popup"></ActionItem>
+      
 </ActionBar>
 
 <TabView class="tab-view" selectedIndex="0">
     <StackLayout class="tab-view" *tabItem="{title: 'الدخول',  iconSource: 'res://logo_white_bg'}">
         <label text="الخادم" class="message"></label>
-        <TextField id="serverip" [text]="server" class="message"></TextField>
+        <TextField id="serverip" [text]="connect.server" class="message"></TextField>
         <label text="اسم المستخدم" class="message"></label>
         <TextField id="username" text="" class="message"></TextField>
         <label text="كلمة السر" class="message"></label>
         <TextField id="password" text="" secure="true" class="message"></TextField>
         <button text="تسجيل الدخول" (tap)="connection()"></button>
     </StackLayout>
-    <GridLayout class="tab-view" rows="*,50" *tabItem="{title: 'الدردشة', iconSource: 'res://logo_white_bg'}">
-        <ListView row="0" id="listMessages" [items]="messages" >
+    <GridLayout class="tab-view"  rows="*,50" *tabItem="{title: 'الدردشة', iconSource: 'res://logo_white_bg'}">
+        <ListView row="0" id="listMessages" [items]="connect.messages" >
             <ng-template let-item="item">
                 <StackLayout>
                     <GridLayout columns="50,auto,auto,*" style="vertical-align: center;">
                         <image col="0" class="message" [src]='item.avatar' height="50"></image>
                         <image col="1" [src]='item.power' height="25" width="auto"></image>
                         <image col="2" [src]='item.dr3' height="25" width="auto"></image>
-                        <button col="3" [text]='item.from' class="btn" [style]='"background-color:" + item.background + ";color:" + item.color + ";"'></button>
+                        <button col="3" [text]='item.from' class="btn" (tap)="showInfo(item.id)" [style]='"background-color:" + item.background + ";color:" + item.color + ";"'></button>
                     </GridLayout>
                     <label [text]='item.message' textWrap="true" class="btn message" [style]='"color:" + item.messageColor + ";"'></label>
                 </StackLayout>
@@ -40,22 +41,22 @@
             <button col="0" text="ارسال" (tap)="sendBroadcast()"></button>
             <TextField  col="1" id="broadcastinput" returnKeyType="send"  (returnPress)="sendBroadcast()" height="100"></TextField>
         </GridLayout>
-        <ListView row="1" id="listBroadcast" [items]="broadcasts" >
+        <ListView row="1" id="listBroadcast" [items]="connect.broadcasts" >
             <ng-template let-item="item">
                 <StackLayout>
                     <GridLayout columns="50,auto,auto,*" style="vertical-align: center;">
                         <image col="0" class="message" [src]='item.avatar' height="50"></image>
                         <image col="1" [src]='item.power' height="25" width="auto"></image>
                         <image col="2" [src]='item.dr3' height="25" width="auto"></image>
-                        <button col="3" [text]='item.from' class="btn" [style]='"background-color:" + item.background + ";color:" + item.color + ";"'></button>
+                        <button col="3" [text]='item.from' class="btn" (tap)="showInfo(item.id)" [style]='"background-color:" + item.background + ";color:" + item.color + ";"'></button>
                     </GridLayout>
                     <label [text]='item.message' textWrap="true" class="btn message" [style]='"color:" + item.messageColor + ";"'></label>
                 </StackLayout>
             </ng-template>
         </ListView>
     </GridLayout>
-    <StackLayout class="tab-view" rows="*" id="tabNotifications" *tabItem="{title: 'الأشعارات ' + notifications.length, iconSource: 'res://logo_white_bg'}">
-        <ListView row="0" id="listNotifications" [items]="notifications" >
+    <StackLayout class="tab-view" rows="*" id="tabNotifications" *tabItem="{title: 'الأشعارات', iconSource: 'res://logo_white_bg'}">
+        <ListView row="0" id="listNotifications" [items]="connect.notifications" >
             <ng-template let-item="item">
                 <StackLayout>
                     <GridLayout columns="50,*" rows="*">
@@ -67,10 +68,10 @@
         </ListView>
     </StackLayout>
     <GridLayout rows="*" class="tab-view" *tabItem="{title: 'الغرف', iconSource: 'res://logo_white_bg'}">
-        <ListView row="0" id="listRooms" [items]="rooms">
+        <ListView row="0" id="listRooms" [items]="connect.rooms">
             <ng-template let-item="item" let-i="index">
                 <GridLayout columns="100,*">
-                    <image col="0" class="message" [src]='server+item.pic' height="100"></image>
+                    <image col="0" class="message" [src]='connect.server+item.pic' height="100"></image>
                     <GridLayout col="1" rows="*,*">
                         <GridLayout row="0" columns="*,auto">
                             <button col="0" [text]='item.topic' (tap)='joinRoom($event,item.id)'></button>                            
@@ -82,15 +83,15 @@
             </ng-template>
         </ListView>
     </GridLayout>
-    <GridLayout rows="*" class="tab-view" id="tabOnlines" *tabItem="{title: 'المتصلين ' + users.length, iconSource: 'res://logo_white_bg'}">
-        <ListView row="0" id="listOnline" [items]="users" >
+    <GridLayout rows="*" class="tab-view" id="tabOnlines" *tabItem="{title: 'المتصلين', iconSource: 'res://logo_white_bg'}">
+        <ListView row="0" id="listOnline" [items]="connect.users" >
             <ng-template let-item="item">
                 <StackLayout>
                     <GridLayout columns="50,auto,auto,*">
-                        <image col="0" class="message" [src]='server+item.pic' height="50"></image>
+                        <image col="0" class="message" [src]='connect.server+item.pic' height="50"></image>
                         <image col="1" [src]='item.sico' height="25" width="auto"></image>
                         <image col="2" [src]='item.dico' height="25" width="auto"></image>
-                        <button col="3" [text]='item.topic' class="btn" [style]='"background-color:" + item.bg + ";color:" + item.ucol + ";"'></button>
+                        <button col="3" [text]='item.topic' (tap)="showInfo(item.id)" class="btn" [style]='"background-color:" + item.bg + ";color:" + item.ucol + ";"'></button>
                     </GridLayout>
                     <label [text]='item.msg' textWrap="true" class="message" [style]='"color:" + item.mcol + ";"'></label>
                 </StackLayout>

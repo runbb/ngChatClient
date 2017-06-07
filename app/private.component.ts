@@ -5,9 +5,10 @@ import { Connection } from "./services/connection";
 
 @Component({
   selector: "my-app",
-  providers: [
-    Connection
-    ],
-  template: '<page-router-outlet></page-router-outlet>',
+  templateUrl: './private.component.html',
 })
-export class AppComponent {}
+export class PrivateComponent {
+    constructor(private page:Page ,private connect:Connection) {}
+
+    refresh(){}
+}
