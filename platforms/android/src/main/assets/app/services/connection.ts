@@ -43,7 +43,7 @@ export class Connection {
   public socket;
   public userid: string;
   public app_name: string = "دردشة الخليج";
-  public connected: Observable<boolean> = new Subject<boolean>();
+  public connected: Subject<boolean> = new Subject<boolean>();
   public connection_name: string = "Android Application";
   
   constructor(){}
