@@ -138,21 +138,21 @@
     </item>
     <item
         is-multidex="false"
-        jar="/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.3"
-        sha1="150252b33b00274cc868578ade018fda0d43a3eb">
-        <dex dex="/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/pre-dexed/F0F1/debug/com.android.support-appcompat-v7-25.3.1_ccabf966ef378ef6e41889f970da313c8a6f0858.jar" />
-    </item>
-    <item
-        is-multidex="false"
         jar="/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/chatclient/runtime/unspecified/jars/classes.jar"
         jumboMode="false"
         optimize="true"
         revision="25.0.3"
         sha1="cb501f7cf4d74a5f9ec1a9c8172e552f57ea3215">
         <dex dex="/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/pre-dexed/F0F1/debug/chatclient-runtime-unspecified_dfae8140a1e91b42b26611afe53e7e6725cd876a.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="150252b33b00274cc868578ade018fda0d43a3eb">
+        <dex dex="/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/pre-dexed/F0F1/debug/com.android.support-appcompat-v7-25.3.1_ccabf966ef378ef6e41889f970da313c8a6f0858.jar" />
     </item>
     <item
         is-multidex="false"

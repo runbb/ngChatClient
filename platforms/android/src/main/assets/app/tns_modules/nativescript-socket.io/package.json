@@ -1,27 +1,26 @@
 {
-  "_from": "nativescript-socket.io",
+  "_from": "nativescript-socket.io@0.5.1",
   "_id": "nativescript-socket.io@0.5.1",
   "_inBundle": false,
   "_integrity": "sha1-nKTqS7Tx/Qr70SpLPrQzcsSpjw0=",
   "_location": "/nativescript-socket.io",
   "_phantomChildren": {},
   "_requested": {
-    "type": "tag",
+    "type": "version",
     "registry": true,
-    "raw": "nativescript-socket.io",
+    "raw": "nativescript-socket.io@0.5.1",
     "name": "nativescript-socket.io",
     "escapedName": "nativescript-socket.io",
-    "rawSpec": "",
+    "rawSpec": "0.5.1",
     "saveSpec": null,
-    "fetchSpec": "latest"
+    "fetchSpec": "0.5.1"
   },
   "_requiredBy": [
-    "#USER",
     "/"
   ],
   "_resolved": "https://registry.npmjs.org/nativescript-socket.io/-/nativescript-socket.io-0.5.1.tgz",
   "_shasum": "9ca4ea4bb4f1fd0afbd12a4b3eb43372c4a98f0d",
-  "_spec": "nativescript-socket.io",
+  "_spec": "nativescript-socket.io@0.5.1",
   "_where": "/home/xlmnxp/Documents/Nativescript/ngChatClient",
   "author": {
     "name": "Nader Toukabri",

@@ -21,7 +21,7 @@
   "_resolved": "https://registry.npmjs.org/tns-core-modules-widgets/-/tns-core-modules-widgets-3.0.1.tgz",
   "_shasum": "835852cd593141808d2d33255806b9378187cf20",
   "_spec": "tns-core-modules-widgets@3.0.1",
-  "_where": "/home/xlmnxp/Documents/Nativescript/ngChatClient/node_modules/tns-core-modules",
+  "_where": "/home/xlmnxp/Documents/Nativescript/ngChatClient",
   "author": {
     "name": "NativeScript team"
   },

@@ -1,27 +1,27 @@
 {
-  "_from": "nativescript-intl@^3.0.0",
+  "_from": "nativescript-intl@3.0.0",
   "_id": "nativescript-intl@3.0.0",
   "_inBundle": false,
   "_integrity": "sha1-gu6b59N3Fys8QpVzRyMDdijhhqc=",
   "_location": "/nativescript-intl",
   "_phantomChildren": {},
   "_requested": {
-    "type": "range",
+    "type": "version",
     "registry": true,
-    "raw": "nativescript-intl@^3.0.0",
+    "raw": "nativescript-intl@3.0.0",
     "name": "nativescript-intl",
     "escapedName": "nativescript-intl",
-    "rawSpec": "^3.0.0",
+    "rawSpec": "3.0.0",
     "saveSpec": null,
-    "fetchSpec": "^3.0.0"
+    "fetchSpec": "3.0.0"
   },
   "_requiredBy": [
     "/nativescript-angular"
   ],
   "_resolved": "https://registry.npmjs.org/nativescript-intl/-/nativescript-intl-3.0.0.tgz",
   "_shasum": "82ee9be7d377172b3c4295734723037628e186a7",
-  "_spec": "nativescript-intl@^3.0.0",
-  "_where": "/home/xlmnxp/Documents/Nativescript/ngChatClient/node_modules/nativescript-angular",
+  "_spec": "nativescript-intl@3.0.0",
+  "_where": "/home/xlmnxp/Documents/Nativescript/ngChatClient",
   "author": {
     "name": "NativeScript Team"
   },

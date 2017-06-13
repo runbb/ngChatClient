@@ -1,27 +1,27 @@
 {
-  "_from": "zone.js@~0.8.5",
+  "_from": "zone.js@0.8.11",
   "_id": "zone.js@0.8.11",
   "_inBundle": false,
   "_integrity": "sha1-dCvvsX+8SaVxcSuMfYfljKJv2IY=",
   "_location": "/zone.js",
   "_phantomChildren": {},
   "_requested": {
-    "type": "range",
+    "type": "version",
     "registry": true,
-    "raw": "zone.js@~0.8.5",
+    "raw": "zone.js@0.8.11",
     "name": "zone.js",
     "escapedName": "zone.js",
-    "rawSpec": "~0.8.5",
+    "rawSpec": "0.8.11",
     "saveSpec": null,
-    "fetchSpec": "~0.8.5"
+    "fetchSpec": "0.8.11"
   },
   "_requiredBy": [
-    "/nativescript-template-ng-tutorial"
+    "/"
   ],
   "_resolved": "https://registry.npmjs.org/zone.js/-/zone.js-0.8.11.tgz",
   "_shasum": "742befb17fbc49a571712b8c7d87e58ca26fd886",
-  "_spec": "zone.js@~0.8.5",
-  "_where": "/home/xlmnxp/Documents/Nativescript/ngChatClient/node_modules/nativescript-template-ng-tutorial",
+  "_spec": "zone.js@0.8.11",
+  "_where": "/home/xlmnxp/Documents/Nativescript/ngChatClient",
   "author": {
     "name": "Brian Ford"
   },

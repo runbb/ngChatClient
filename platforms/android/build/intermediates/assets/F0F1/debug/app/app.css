@@ -1,5 +1,20 @@
-.message{
+/*.message{
     font-size: 21px;
     margin-left: 3px;
     margin-right: 3px;
+}*/
+
+#listBroadcast ng-template,#listMessages ng-template{
+    border-bottom-color: transparent;
+}
+
+#listBroadcast StackLayout label,#listMessages StackLayout label{
+    border: 1px solid #ff8a50;
+    background-color: #ff8a50;
+    margin: 6px;
+    padding: 12px;
+}
+
+image{
+    background-color: transparent;
 }

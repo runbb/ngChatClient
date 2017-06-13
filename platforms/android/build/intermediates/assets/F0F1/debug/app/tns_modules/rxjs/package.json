@@ -1,27 +1,27 @@
 {
-  "_from": "rxjs@~5.2.0",
+  "_from": "rxjs@5.2.0",
   "_id": "rxjs@5.2.0",
   "_inBundle": false,
   "_integrity": "sha1-21N96HZ8BfpzchWHop4AhTB9MYs=",
   "_location": "/rxjs",
   "_phantomChildren": {},
   "_requested": {
-    "type": "range",
+    "type": "version",
     "registry": true,
-    "raw": "rxjs@~5.2.0",
+    "raw": "rxjs@5.2.0",
     "name": "rxjs",
     "escapedName": "rxjs",
-    "rawSpec": "~5.2.0",
+    "rawSpec": "5.2.0",
     "saveSpec": null,
-    "fetchSpec": "~5.2.0"
+    "fetchSpec": "5.2.0"
   },
   "_requiredBy": [
-    "/nativescript-template-ng-tutorial"
+    "/"
   ],
   "_resolved": "https://registry.npmjs.org/rxjs/-/rxjs-5.2.0.tgz",
   "_shasum": "db537de8767c05fa73721587a29e0085307d318b",
-  "_spec": "rxjs@~5.2.0",
-  "_where": "/home/xlmnxp/Documents/Nativescript/ngChatClient/node_modules/nativescript-template-ng-tutorial",
+  "_spec": "rxjs@5.2.0",
+  "_where": "/home/xlmnxp/Documents/Nativescript/ngChatClient",
   "author": {
     "name": "Ben Lesh",
     "email": "ben@benlesh.com"

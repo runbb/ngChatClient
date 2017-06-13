@@ -1,22 +1,13 @@
 <ActionBar class="action-bar" [title]="connect.app_name">
-    <ActionItem *ngIf="connect.connected | async" (tap)="sendAdvertising()"
+    <ActionItem (tap)="sendAdvertising()"
       text="ارسال اعلان" android.position="popup"></ActionItem>
 
-    <ActionItem *ngIf="connect.connected | async" (tap)="showInfo()"
+    <ActionItem (tap)="showInfo()"
       text="معلوماتي" android.position="popup"></ActionItem>
       
 </ActionBar>
 
 <TabView class="tab-view" selectedIndex="0">
-    <StackLayout class="tab-view" *tabItem="{title: 'الدخول',  iconSource: 'res://logo_white_bg'}">
-        <label text="الخادم" class="message"></label>
-        <TextField id="serverip" [text]="connect.server" class="message"></TextField>
-        <label text="اسم المستخدم" class="message"></label>
-        <TextField id="username" text="" class="message"></TextField>
-        <label text="كلمة السر" class="message"></label>
-        <TextField id="password" text="" secure="true" class="message"></TextField>
-        <button text="تسجيل الدخول" (tap)="connection()"></button>
-    </StackLayout>
     <GridLayout class="tab-view"  rows="*,50" *tabItem="{title: 'الدردشة', iconSource: 'res://logo_white_bg'}">
         <ListView row="0" id="listMessages" [items]="connect.messages" >
             <ng-template let-item="item">

@@ -8,13 +8,6 @@
     border-bottom-color: transparent;
 }
 
-#listBroadcast StackLayout label,#listMessages StackLayout label{
-    border: 1px solid #ff8a50;
-    background-color: #ff8a50;
-    margin: 6px;
-    padding: 12px;
-}
-
 image{
     background-color: transparent;
 }

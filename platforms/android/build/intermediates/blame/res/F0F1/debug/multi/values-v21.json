@@ -11,7 +11,14 @@
                     "endOffset": 154
                 },
                 "from": {
-                    "file": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-v21/values-v21.xml"
+                    "file": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-v21/values-v21.xml",
+                    "position": {
+                        "startLine": 2,
+                        "startColumn": 4,
+                        "startOffset": 55,
+                        "endColumn": 103,
+                        "endOffset": 154
+                    }
                 }
             },
             {
@@ -42,7 +49,14 @@
                     "endOffset": 262
                 },
                 "from": {
-                    "file": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-v21/values-v21.xml"
+                    "file": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-v21/values-v21.xml",
+                    "position": {
+                        "startLine": 3,
+                        "startColumn": 4,
+                        "startOffset": 159,
+                        "endColumn": 63,
+                        "endOffset": 218
+                    }
                 }
             },
             {
@@ -54,7 +68,14 @@
                     "endOffset": 329
                 },
                 "from": {
-                    "file": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-v21/values-v21.xml"
+                    "file": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-v21/values-v21.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 223,
+                        "endColumn": 66,
+                        "endOffset": 285
+                    }
                 }
             },
             {
@@ -66,7 +87,14 @@
                     "endOffset": 393
                 },
                 "from": {
-                    "file": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-v21/values-v21.xml"
+                    "file": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-v21/values-v21.xml",
+                    "position": {
+                        "startLine": 5,
+                        "startColumn": 4,
+                        "startOffset": 290,
+                        "endColumn": 63,
+                        "endOffset": 349
+                    }
                 }
             },
             {
@@ -79,7 +107,15 @@
                     "endOffset": 610
                 },
                 "from": {
-                    "file": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/src/main/res/values-v21/styles.xml"
+                    "file": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/src/main/res/values-v21/styles.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 87,
+                        "endLine": 7,
+                        "endColumn": 12,
+                        "endOffset": 299
+                    }
                 }
             },
             {
@@ -91,7 +127,14 @@
                     "endOffset": 701
                 },
                 "from": {
-                    "file": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-v21/values-v21.xml"
+                    "file": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-v21/values-v21.xml",
+                    "position": {
+                        "startLine": 6,
+                        "startColumn": 4,
+                        "startOffset": 354,
+                        "endColumn": 90,
+                        "endOffset": 440
+                    }
                 }
             },
             {
@@ -103,7 +146,14 @@
                     "endOffset": 804
                 },
                 "from": {
-                    "file": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-v21/values-v21.xml"
+                    "file": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-v21/values-v21.xml",
+                    "position": {
+                        "startLine": 7,
+                        "startColumn": 4,
+                        "startOffset": 445,
+                        "endColumn": 102,
+                        "endOffset": 543
+                    }
                 }
             },
             {
@@ -115,7 +165,14 @@
                     "endOffset": 907
                 },
                 "from": {
-                    "file": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-v21/values-v21.xml"
+                    "file": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-v21/values-v21.xml",
+                    "position": {
+                        "startLine": 8,
+                        "startColumn": 4,
+                        "startOffset": 548,
+                        "endColumn": 102,
+                        "endOffset": 646
+                    }
                 }
             },
             {
@@ -127,7 +184,14 @@
                     "endOffset": 1012
                 },
                 "from": {
-                    "file": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-v21/values-v21.xml"
+                    "file": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-v21/values-v21.xml",
+                    "position": {
+                        "startLine": 9,
+                        "startColumn": 4,
+                        "startOffset": 651,
+                        "endColumn": 104,
+                        "endOffset": 751
+                    }
                 }
             },
             {
@@ -139,7 +203,14 @@
                     "endOffset": 1119
                 },
                 "from": {
-                    "file": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-v21/values-v21.xml"
+                    "file": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-v21/values-v21.xml",
+                    "position": {
+                        "startLine": 10,
+                        "startColumn": 4,
+                        "startOffset": 756,
+                        "endColumn": 106,
+                        "endOffset": 858
+                    }
                 }
             },
             {
@@ -151,7 +222,14 @@
                     "endOffset": 1228
                 },
                 "from": {
-                    "file": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-v21/values-v21.xml"
+                    "file": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-v21/values-v21.xml",
+                    "position": {
+                        "startLine": 11,
+                        "startColumn": 4,
+                        "startOffset": 863,
+                        "endColumn": 108,
+                        "endOffset": 967
+                    }
                 }
             },
             {
@@ -163,7 +241,14 @@
                     "endOffset": 1337
                 },
                 "from": {
-                    "file": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-v21/values-v21.xml"
+                    "file": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-v21/values-v21.xml",
+                    "position": {
+                        "startLine": 12,
+                        "startColumn": 4,
+                        "startOffset": 972,
+                        "endColumn": 108,
+                        "endOffset": 1076
+                    }
                 }
             },
             {
@@ -175,7 +260,14 @@
                     "endOffset": 1446
                 },
                 "from": {
-                    "file": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-v21/values-v21.xml"
+                    "file": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-v21/values-v21.xml",
+                    "position": {
+                        "startLine": 13,
+                        "startColumn": 4,
+                        "startOffset": 1081,
+                        "endColumn": 108,
+                        "endOffset": 1185
+                    }
                 }
             },
             {
@@ -187,7 +279,14 @@
                     "endOffset": 1555
                 },
                 "from": {
-                    "file": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-v21/values-v21.xml"
+                    "file": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-v21/values-v21.xml",
+                    "position": {
+                        "startLine": 14,
+                        "startColumn": 4,
+                        "startOffset": 1190,
+                        "endColumn": 108,
+                        "endOffset": 1294
+                    }
                 }
             },
             {
@@ -199,7 +298,14 @@
                     "endOffset": 1664
                 },
                 "from": {
-                    "file": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-v21/values-v21.xml"
+                    "file": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-v21/values-v21.xml",
+                    "position": {
+                        "startLine": 15,
+                        "startColumn": 4,
+                        "startOffset": 1299,
+                        "endColumn": 108,
+                        "endOffset": 1403
+                    }
                 }
             },
             {
@@ -211,7 +317,14 @@
                     "endOffset": 1771
                 },
                 "from": {
-                    "file": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-v21/values-v21.xml"
+                    "file": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-v21/values-v21.xml",
+                    "position": {
+                        "startLine": 16,
+                        "startColumn": 4,
+                        "startOffset": 1408,
+                        "endColumn": 106,
+                        "endOffset": 1510
+                    }
                 }
             },
             {
@@ -223,7 +336,14 @@
                     "endOffset": 1874
                 },
                 "from": {
-                    "file": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-v21/values-v21.xml"
+                    "file": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-v21/values-v21.xml",
+                    "position": {
+                        "startLine": 17,
+                        "startColumn": 4,
+                        "startOffset": 1515,
+                        "endColumn": 102,
+                        "endOffset": 1613
+                    }
                 }
             },
             {
@@ -235,7 +355,14 @@
                     "endOffset": 1993
                 },
                 "from": {
-                    "file": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-v21/values-v21.xml"
+                    "file": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-v21/values-v21.xml",
+                    "position": {
+                        "startLine": 18,
+                        "startColumn": 4,
+                        "startOffset": 1618,
+                        "endColumn": 118,
+                        "endOffset": 1732
+                    }
                 }
             },
             {
@@ -248,7 +375,15 @@
                     "endOffset": 2148
                 },
                 "from": {
-                    "file": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-v21/values-v21.xml"
+                    "file": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-v21/values-v21.xml",
+                    "position": {
+                        "startLine": 19,
+                        "startColumn": 4,
+                        "startOffset": 1737,
+                        "endLine": 20,
+                        "endColumn": 12,
+                        "endOffset": 1887
+                    }
                 }
             },
             {
@@ -261,7 +396,15 @@
                     "endOffset": 2303
                 },
                 "from": {
-                    "file": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-v21/values-v21.xml"
+                    "file": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-v21/values-v21.xml",
+                    "position": {
+                        "startLine": 21,
+                        "startColumn": 4,
+                        "startOffset": 1892,
+                        "endLine": 22,
+                        "endColumn": 12,
+                        "endOffset": 2042
+                    }
                 }
             },
             {
@@ -273,7 +416,14 @@
                     "endOffset": 2408
                 },
                 "from": {
-                    "file": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-v21/values-v21.xml"
+                    "file": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-v21/values-v21.xml",
+                    "position": {
+                        "startLine": 23,
+                        "startColumn": 4,
+                        "startOffset": 2047,
+                        "endColumn": 104,
+                        "endOffset": 2147
+                    }
                 }
             },
             {
@@ -285,7 +435,14 @@
                     "endOffset": 2529
                 },
                 "from": {
-                    "file": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-v21/values-v21.xml"
+                    "file": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-v21/values-v21.xml",
+                    "position": {
+                        "startLine": 24,
+                        "startColumn": 4,
+                        "startOffset": 2152,
+                        "endColumn": 120,
+                        "endOffset": 2268
+                    }
                 }
             },
             {
@@ -297,7 +454,14 @@
                     "endOffset": 2630
                 },
                 "from": {
-                    "file": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-v21/values-v21.xml"
+                    "file": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-v21/values-v21.xml",
+                    "position": {
+                        "startLine": 25,
+                        "startColumn": 4,
+                        "startOffset": 2273,
+                        "endColumn": 100,
+                        "endOffset": 2369
+                    }
                 }
             },
             {
@@ -310,7 +474,15 @@
                     "endOffset": 2777
                 },
                 "from": {
-                    "file": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-v21/values-v21.xml"
+                    "file": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-v21/values-v21.xml",
+                    "position": {
+                        "startLine": 26,
+                        "startColumn": 4,
+                        "startOffset": 2374,
+                        "endLine": 27,
+                        "endColumn": 12,
+                        "endOffset": 2516
+                    }
                 }
             },
             {
@@ -323,7 +495,15 @@
                     "endOffset": 2918
                 },
                 "from": {
-                    "file": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-v21/values-v21.xml"
+                    "file": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-v21/values-v21.xml",
+                    "position": {
+                        "startLine": 28,
+                        "startColumn": 4,
+                        "startOffset": 2521,
+                        "endLine": 29,
+                        "endColumn": 12,
+                        "endOffset": 2657
+                    }
                 }
             },
             {
@@ -335,7 +515,14 @@
                     "endOffset": 3021
                 },
                 "from": {
-                    "file": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-v21/values-v21.xml"
+                    "file": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-v21/values-v21.xml",
+                    "position": {
+                        "startLine": 30,
+                        "startColumn": 4,
+                        "startOffset": 2662,
+                        "endColumn": 102,
+                        "endOffset": 2760
+                    }
                 }
             },
             {
@@ -347,7 +534,14 @@
                     "endOffset": 3140
                 },
                 "from": {
-                    "file": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-v21/values-v21.xml"
+                    "file": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-v21/values-v21.xml",
+                    "position": {
+                        "startLine": 31,
+                        "startColumn": 4,
+                        "startOffset": 2765,
+                        "endColumn": 118,
+                        "endOffset": 2879
+                    }
                 }
             },
             {
@@ -359,7 +553,14 @@
                     "endOffset": 3247
                 },
                 "from": {
-                    "file": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-v21/values-v21.xml"
+                    "file": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-v21/values-v21.xml",
+                    "position": {
+                        "startLine": 32,
+                        "startColumn": 4,
+                        "startOffset": 2884,
+                        "endColumn": 106,
+                        "endOffset": 2986
+                    }
                 }
             },
             {
@@ -371,7 +572,14 @@
                     "endOffset": 3350
                 },
                 "from": {
-                    "file": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-v21/values-v21.xml"
+                    "file": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-v21/values-v21.xml",
+                    "position": {
+                        "startLine": 33,
+                        "startColumn": 4,
+                        "startOffset": 2991,
+                        "endColumn": 102,
+                        "endOffset": 3089
+                    }
                 }
             },
             {
@@ -384,7 +592,15 @@
                     "endOffset": 3505
                 },
                 "from": {
-                    "file": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-v21/values-v21.xml"
+                    "file": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-v21/values-v21.xml",
+                    "position": {
+                        "startLine": 34,
+                        "startColumn": 4,
+                        "startOffset": 3094,
+                        "endLine": 35,
+                        "endColumn": 12,
+                        "endOffset": 3244
+                    }
                 }
             },
             {
@@ -397,7 +613,15 @@
                     "endOffset": 3676
                 },
                 "from": {
-                    "file": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-v21/values-v21.xml"
+                    "file": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-v21/values-v21.xml",
+                    "position": {
+                        "startLine": 36,
+                        "startColumn": 4,
+                        "startOffset": 3249,
+                        "endLine": 37,
+                        "endColumn": 12,
+                        "endOffset": 3415
+                    }
                 }
             },
             {
@@ -410,7 +634,15 @@
                     "endOffset": 3825
                 },
                 "from": {
-                    "file": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-v21/values-v21.xml"
+                    "file": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-v21/values-v21.xml",
+                    "position": {
+                        "startLine": 38,
+                        "startColumn": 4,
+                        "startOffset": 3420,
+                        "endLine": 39,
+                        "endColumn": 12,
+                        "endOffset": 3564
+                    }
                 }
             },
             {
@@ -423,7 +655,15 @@
                     "endOffset": 3990
                 },
                 "from": {
-                    "file": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-v21/values-v21.xml"
+                    "file": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-v21/values-v21.xml",
+                    "position": {
+                        "startLine": 40,
+                        "startColumn": 4,
+                        "startOffset": 3569,
+                        "endLine": 41,
+                        "endColumn": 12,
+                        "endOffset": 3729
+                    }
                 }
             },
             {
@@ -436,7 +676,15 @@
                     "endOffset": 4147
                 },
                 "from": {
-                    "file": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-v21/values-v21.xml"
+                    "file": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-v21/values-v21.xml",
+                    "position": {
+                        "startLine": 42,
+                        "startColumn": 4,
+                        "startOffset": 3734,
+                        "endLine": 43,
+                        "endColumn": 12,
+                        "endOffset": 3886
+                    }
                 }
             },
             {
@@ -449,7 +697,15 @@
                     "endOffset": 4298
                 },
                 "from": {
-                    "file": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-v21/values-v21.xml"
+                    "file": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-v21/values-v21.xml",
+                    "position": {
+                        "startLine": 44,
+                        "startColumn": 4,
+                        "startOffset": 3891,
+                        "endLine": 45,
+                        "endColumn": 12,
+                        "endOffset": 4037
+                    }
                 }
             },
             {
@@ -461,7 +717,14 @@
                     "endOffset": 4417
                 },
                 "from": {
-                    "file": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-v21/values-v21.xml"
+                    "file": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-v21/values-v21.xml",
+                    "position": {
+                        "startLine": 46,
+                        "startColumn": 4,
+                        "startOffset": 4042,
+                        "endColumn": 118,
+                        "endOffset": 4156
+                    }
                 }
             },
             {
@@ -474,7 +737,15 @@
                     "endOffset": 4789
                 },
                 "from": {
-                    "file": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-v21/values-v21.xml"
+                    "file": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-v21/values-v21.xml",
+                    "position": {
+                        "startLine": 47,
+                        "startColumn": 4,
+                        "startOffset": 4161,
+                        "endLine": 51,
+                        "endColumn": 12,
+                        "endOffset": 4528
+                    }
                 }
             },
             {
@@ -487,7 +758,15 @@
                     "endOffset": 4938
                 },
                 "from": {
-                    "file": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-v21/values-v21.xml"
+                    "file": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-v21/values-v21.xml",
+                    "position": {
+                        "startLine": 52,
+                        "startColumn": 4,
+                        "startOffset": 4533,
+                        "endLine": 53,
+                        "endColumn": 12,
+                        "endOffset": 4677
+                    }
                 }
             },
             {
@@ -500,7 +779,15 @@
                     "endOffset": 5087
                 },
                 "from": {
-                    "file": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-v21/values-v21.xml"
+                    "file": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-v21/values-v21.xml",
+                    "position": {
+                        "startLine": 54,
+                        "startColumn": 4,
+                        "startOffset": 4682,
+                        "endLine": 55,
+                        "endColumn": 12,
+                        "endOffset": 4826
+                    }
                 }
             },
             {
@@ -512,7 +799,14 @@
                     "endOffset": 5199
                 },
                 "from": {
-                    "file": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-v21/values-v21.xml"
+                    "file": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-v21/values-v21.xml",
+                    "position": {
+                        "startLine": 56,
+                        "startColumn": 4,
+                        "startOffset": 4831,
+                        "endColumn": 111,
+                        "endOffset": 4938
+                    }
                 }
             },
             {
@@ -524,7 +818,14 @@
                     "endOffset": 5346
                 },
                 "from": {
-                    "file": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-v21/values-v21.xml"
+                    "file": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-v21/values-v21.xml",
+                    "position": {
+                        "startLine": 57,
+                        "startColumn": 4,
+                        "startOffset": 4943,
+                        "endColumn": 146,
+                        "endOffset": 5085
+                    }
                 }
             },
             {
@@ -537,7 +838,15 @@
                     "endOffset": 5499
                 },
                 "from": {
-                    "file": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-v21/values-v21.xml"
+                    "file": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-v21/values-v21.xml",
+                    "position": {
+                        "startLine": 58,
+                        "startColumn": 4,
+                        "startOffset": 5090,
+                        "endLine": 59,
+                        "endColumn": 12,
+                        "endOffset": 5238
+                    }
                 }
             },
             {
@@ -550,7 +859,15 @@
                     "endOffset": 5646
                 },
                 "from": {
-                    "file": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-v21/values-v21.xml"
+                    "file": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-v21/values-v21.xml",
+                    "position": {
+                        "startLine": 60,
+                        "startColumn": 4,
+                        "startOffset": 5243,
+                        "endLine": 61,
+                        "endColumn": 12,
+                        "endOffset": 5385
+                    }
                 }
             },
             {
@@ -562,7 +879,14 @@
                     "endOffset": 5721
                 },
                 "from": {
-                    "file": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-v21/values-v21.xml"
+                    "file": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-v21/values-v21.xml",
+                    "position": {
+                        "startLine": 62,
+                        "startColumn": 4,
+                        "startOffset": 5390,
+                        "endColumn": 74,
+                        "endOffset": 5460
+                    }
                 }
             },
             {
@@ -574,7 +898,14 @@
                     "endOffset": 5810
                 },
                 "from": {
-                    "file": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-v21/values-v21.xml"
+                    "file": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-v21/values-v21.xml",
+                    "position": {
+                        "startLine": 63,
+                        "startColumn": 4,
+                        "startOffset": 5465,
+                        "endColumn": 88,
+                        "endOffset": 5549
+                    }
                 }
             },
             {
@@ -586,7 +917,14 @@
                     "endOffset": 5897
                 },
                 "from": {
-                    "file": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-v21/values-v21.xml"
+                    "file": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-v21/values-v21.xml",
+                    "position": {
+                        "startLine": 64,
+                        "startColumn": 4,
+                        "startOffset": 5554,
+                        "endColumn": 86,
+                        "endOffset": 5636
+                    }
                 }
             },
             {
@@ -598,7 +936,14 @@
                     "endOffset": 5998
                 },
                 "from": {
-                    "file": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-v21/values-v21.xml"
+                    "file": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-v21/values-v21.xml",
+                    "position": {
+                        "startLine": 65,
+                        "startColumn": 4,
+                        "startOffset": 5641,
+                        "endColumn": 100,
+                        "endOffset": 5737
+                    }
                 }
             },
             {
@@ -610,7 +955,14 @@
                     "endOffset": 6101
                 },
                 "from": {
-                    "file": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-v21/values-v21.xml"
+                    "file": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-v21/values-v21.xml",
+                    "position": {
+                        "startLine": 66,
+                        "startColumn": 4,
+                        "startOffset": 5742,
+                        "endColumn": 102,
+                        "endOffset": 5840
+                    }
                 }
             },
             {
@@ -620,754 +972,1211 @@
                     "startOffset": 6106,
                     "endLine": 115,
                     "endColumn": 12,
-                    "endOffset": 8953
+                    "endOffset": 9169
                 },
                 "from": {
-                    "file": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-v21/values-v21.xml"
+                    "file": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-v21/values-v21.xml",
+                    "position": {
+                        "startLine": 67,
+                        "startColumn": 4,
+                        "startOffset": 5845,
+                        "endLine": 110,
+                        "endColumn": 12,
+                        "endOffset": 8908
+                    }
                 }
             },
             {
                 "to": {
                     "startLine": 116,
                     "startColumn": 4,
-                    "startOffset": 8958,
+                    "startOffset": 9174,
                     "endLine": 118,
                     "endColumn": 12,
-                    "endOffset": 9139
+                    "endOffset": 9355
                 },
                 "from": {
-                    "file": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-v21/values-v21.xml"
+                    "file": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-v21/values-v21.xml",
+                    "position": {
+                        "startLine": 111,
+                        "startColumn": 4,
+                        "startOffset": 8913,
+                        "endLine": 113,
+                        "endColumn": 12,
+                        "endOffset": 9094
+                    }
                 }
             },
             {
                 "to": {
                     "startLine": 119,
                     "startColumn": 4,
-                    "startOffset": 9144,
+                    "startOffset": 9360,
                     "endLine": 162,
                     "endColumn": 12,
-                    "endOffset": 12003
+                    "endOffset": 12435
                 },
                 "from": {
-                    "file": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-v21/values-v21.xml"
+                    "file": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-v21/values-v21.xml",
+                    "position": {
+                        "startLine": 114,
+                        "startColumn": 4,
+                        "startOffset": 9099,
+                        "endLine": 157,
+                        "endColumn": 12,
+                        "endOffset": 12174
+                    }
                 }
             },
             {
                 "to": {
                     "startLine": 163,
                     "startColumn": 4,
-                    "startOffset": 12008,
+                    "startOffset": 12440,
                     "endLine": 165,
                     "endColumn": 12,
-                    "endOffset": 12201
+                    "endOffset": 12633
                 },
                 "from": {
-                    "file": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-v21/values-v21.xml"
+                    "file": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-v21/values-v21.xml",
+                    "position": {
+                        "startLine": 158,
+                        "startColumn": 4,
+                        "startOffset": 12179,
+                        "endLine": 160,
+                        "endColumn": 12,
+                        "endOffset": 12372
+                    }
                 }
             },
             {
                 "to": {
                     "startLine": 166,
                     "startColumn": 4,
-                    "startOffset": 12206,
+                    "startOffset": 12638,
                     "endLine": 168,
                     "endColumn": 12,
-                    "endOffset": 12401
+                    "endOffset": 12833
                 },
                 "from": {
-                    "file": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-v21/values-v21.xml"
+                    "file": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-v21/values-v21.xml",
+                    "position": {
+                        "startLine": 161,
+                        "startColumn": 4,
+                        "startOffset": 12377,
+                        "endLine": 163,
+                        "endColumn": 12,
+                        "endOffset": 12572
+                    }
                 }
             },
             {
                 "to": {
                     "startLine": 169,
                     "startColumn": 4,
-                    "startOffset": 12406,
+                    "startOffset": 12838,
                     "endLine": 170,
                     "endColumn": 12,
-                    "endOffset": 12524
+                    "endOffset": 12956
                 },
                 "from": {
-                    "file": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-v21/values-v21.xml"
+                    "file": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-v21/values-v21.xml",
+                    "position": {
+                        "startLine": 164,
+                        "startColumn": 4,
+                        "startOffset": 12577,
+                        "endLine": 165,
+                        "endColumn": 12,
+                        "endOffset": 12695
+                    }
                 }
             },
             {
                 "to": {
                     "startLine": 171,
                     "startColumn": 4,
-                    "startOffset": 12529,
+                    "startOffset": 12961,
                     "endLine": 172,
                     "endColumn": 12,
-                    "endOffset": 12647
+                    "endOffset": 13079
                 },
                 "from": {
-                    "file": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-v21/values-v21.xml"
+                    "file": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-v21/values-v21.xml",
+                    "position": {
+                        "startLine": 166,
+                        "startColumn": 4,
+                        "startOffset": 12700,
+                        "endLine": 167,
+                        "endColumn": 12,
+                        "endOffset": 12818
+                    }
                 }
             },
             {
                 "to": {
                     "startLine": 173,
                     "startColumn": 4,
-                    "startOffset": 12652,
+                    "startOffset": 13084,
                     "endLine": 174,
                     "endColumn": 12,
-                    "endOffset": 12760
+                    "endOffset": 13192
                 },
                 "from": {
-                    "file": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-v21/values-v21.xml"
+                    "file": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-v21/values-v21.xml",
+                    "position": {
+                        "startLine": 168,
+                        "startColumn": 4,
+                        "startOffset": 12823,
+                        "endLine": 169,
+                        "endColumn": 12,
+                        "endOffset": 12931
+                    }
                 }
             },
             {
                 "to": {
                     "startLine": 175,
                     "startColumn": 4,
-                    "startOffset": 12765,
+                    "startOffset": 13197,
                     "endLine": 177,
                     "endColumn": 12,
-                    "endOffset": 12943
+                    "endOffset": 13375
                 },
                 "from": {
-                    "file": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-v21/values-v21.xml"
+                    "file": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-v21/values-v21.xml",
+                    "position": {
+                        "startLine": 170,
+                        "startColumn": 4,
+                        "startOffset": 12936,
+                        "endLine": 172,
+                        "endColumn": 12,
+                        "endOffset": 13114
+                    }
                 }
             },
             {
                 "to": {
                     "startLine": 178,
                     "startColumn": 4,
-                    "startOffset": 12948,
+                    "startOffset": 13380,
                     "endLine": 179,
                     "endColumn": 12,
-                    "endOffset": 13074
+                    "endOffset": 13506
                 },
                 "from": {
-                    "file": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-v21/values-v21.xml"
+                    "file": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-v21/values-v21.xml",
+                    "position": {
+                        "startLine": 173,
+                        "startColumn": 4,
+                        "startOffset": 13119,
+                        "endLine": 174,
+                        "endColumn": 12,
+                        "endOffset": 13245
+                    }
                 }
             },
             {
                 "to": {
                     "startLine": 180,
                     "startColumn": 4,
-                    "startOffset": 13079,
+                    "startOffset": 13511,
                     "endLine": 182,
                     "endColumn": 12,
-                    "endOffset": 13275
+                    "endOffset": 13707
                 },
                 "from": {
-                    "file": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-v21/values-v21.xml"
+                    "file": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-v21/values-v21.xml",
+                    "position": {
+                        "startLine": 175,
+                        "startColumn": 4,
+                        "startOffset": 13250,
+                        "endLine": 177,
+                        "endColumn": 12,
+                        "endOffset": 13446
+                    }
                 }
             },
             {
                 "to": {
                     "startLine": 183,
                     "startColumn": 4,
-                    "startOffset": 13280,
+                    "startOffset": 13712,
                     "endColumn": 88,
-                    "endOffset": 13364
+                    "endOffset": 13796
                 },
                 "from": {
-                    "file": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-v21/values-v21.xml"
+                    "file": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-v21/values-v21.xml",
+                    "position": {
+                        "startLine": 178,
+                        "startColumn": 4,
+                        "startOffset": 13451,
+                        "endColumn": 88,
+                        "endOffset": 13535
+                    }
                 }
             },
             {
                 "to": {
                     "startLine": 184,
                     "startColumn": 4,
-                    "startOffset": 13369,
+                    "startOffset": 13801,
                     "endColumn": 110,
-                    "endOffset": 13475
+                    "endOffset": 13907
                 },
                 "from": {
-                    "file": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-v21/values-v21.xml"
+                    "file": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-v21/values-v21.xml",
+                    "position": {
+                        "startLine": 179,
+                        "startColumn": 4,
+                        "startOffset": 13540,
+                        "endColumn": 110,
+                        "endOffset": 13646
+                    }
                 }
             },
             {
                 "to": {
                     "startLine": 185,
                     "startColumn": 4,
-                    "startOffset": 13480,
+                    "startOffset": 13912,
                     "endLine": 187,
                     "endColumn": 12,
-                    "endOffset": 13708
+                    "endOffset": 14140
                 },
                 "from": {
-                    "file": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-v21/values-v21.xml"
+                    "file": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-v21/values-v21.xml",
+                    "position": {
+                        "startLine": 180,
+                        "startColumn": 4,
+                        "startOffset": 13651,
+                        "endLine": 182,
+                        "endColumn": 12,
+                        "endOffset": 13879
+                    }
                 }
             },
             {
                 "to": {
                     "startLine": 188,
                     "startColumn": 4,
-                    "startOffset": 13713,
+                    "startOffset": 14145,
                     "endColumn": 100,
-                    "endOffset": 13809
+                    "endOffset": 14241
                 },
                 "from": {
-                    "file": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-v21/values-v21.xml"
+                    "file": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-v21/values-v21.xml",
+                    "position": {
+                        "startLine": 183,
+                        "startColumn": 4,
+                        "startOffset": 13884,
+                        "endColumn": 100,
+                        "endOffset": 13980
+                    }
                 }
             },
             {
                 "to": {
                     "startLine": 189,
                     "startColumn": 4,
-                    "startOffset": 13814,
+                    "startOffset": 14246,
                     "endColumn": 94,
-                    "endOffset": 13904
+                    "endOffset": 14336
                 },
                 "from": {
-                    "file": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-v21/values-v21.xml"
+                    "file": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-v21/values-v21.xml",
+                    "position": {
+                        "startLine": 184,
+                        "startColumn": 4,
+                        "startOffset": 13985,
+                        "endColumn": 94,
+                        "endOffset": 14075
+                    }
                 }
             },
             {
                 "to": {
                     "startLine": 190,
                     "startColumn": 4,
-                    "startOffset": 13909,
+                    "startOffset": 14341,
                     "endColumn": 122,
-                    "endOffset": 14027
+                    "endOffset": 14459
                 },
                 "from": {
-                    "file": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-v21/values-v21.xml"
+                    "file": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-v21/values-v21.xml",
+                    "position": {
+                        "startLine": 185,
+                        "startColumn": 4,
+                        "startOffset": 14080,
+                        "endColumn": 122,
+                        "endOffset": 14198
+                    }
                 }
             },
             {
                 "to": {
                     "startLine": 191,
                     "startColumn": 4,
-                    "startOffset": 14032,
+                    "startOffset": 14464,
                     "endColumn": 128,
-                    "endOffset": 14156
+                    "endOffset": 14588
                 },
                 "from": {
-                    "file": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-v21/values-v21.xml"
+                    "file": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-v21/values-v21.xml",
+                    "position": {
+                        "startLine": 186,
+                        "startColumn": 4,
+                        "startOffset": 14203,
+                        "endColumn": 128,
+                        "endOffset": 14327
+                    }
                 }
             },
             {
                 "to": {
                     "startLine": 192,
                     "startColumn": 4,
-                    "startOffset": 14161,
+                    "startOffset": 14593,
                     "endColumn": 116,
-                    "endOffset": 14273
+                    "endOffset": 14705
                 },
                 "from": {
-                    "file": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-v21/values-v21.xml"
+                    "file": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-v21/values-v21.xml",
+                    "position": {
+                        "startLine": 187,
+                        "startColumn": 4,
+                        "startOffset": 14332,
+                        "endColumn": 116,
+                        "endOffset": 14444
+                    }
                 }
             },
             {
                 "to": {
                     "startLine": 193,
                     "startColumn": 4,
-                    "startOffset": 14278,
+                    "startOffset": 14710,
                     "endLine": 195,
                     "endColumn": 12,
-                    "endOffset": 14450
+                    "endOffset": 14882
                 },
                 "from": {
-                    "file": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-v21/values-v21.xml"
+                    "file": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-v21/values-v21.xml",
+                    "position": {
+                        "startLine": 188,
+                        "startColumn": 4,
+                        "startOffset": 14449,
+                        "endLine": 190,
+                        "endColumn": 12,
+                        "endOffset": 14621
+                    }
                 }
             },
             {
                 "to": {
                     "startLine": 196,
                     "startColumn": 4,
-                    "startOffset": 14455,
+                    "startOffset": 14887,
                     "endColumn": 98,
-                    "endOffset": 14549
+                    "endOffset": 14981
                 },
                 "from": {
-                    "file": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-v21/values-v21.xml"
+                    "file": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-v21/values-v21.xml",
+                    "position": {
+                        "startLine": 191,
+                        "startColumn": 4,
+                        "startOffset": 14626,
+                        "endColumn": 98,
+                        "endOffset": 14720
+                    }
                 }
             },
             {
                 "to": {
                     "startLine": 197,
                     "startColumn": 4,
-                    "startOffset": 14554,
+                    "startOffset": 14986,
                     "endLine": 198,
                     "endColumn": 12,
-                    "endOffset": 14684
+                    "endOffset": 15116
                 },
                 "from": {
-                    "file": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-v21/values-v21.xml"
+                    "file": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-v21/values-v21.xml",
+                    "position": {
+                        "startLine": 192,
+                        "startColumn": 4,
+                        "startOffset": 14725,
+                        "endLine": 193,
+                        "endColumn": 12,
+                        "endOffset": 14855
+                    }
                 }
             },
             {
                 "to": {
                     "startLine": 199,
                     "startColumn": 4,
-                    "startOffset": 14689,
+                    "startOffset": 15121,
                     "endLine": 200,
                     "endColumn": 12,
-                    "endOffset": 14827
+                    "endOffset": 15259
                 },
                 "from": {
-                    "file": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-v21/values-v21.xml"
+                    "file": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-v21/values-v21.xml",
+                    "position": {
+                        "startLine": 194,
+                        "startColumn": 4,
+                        "startOffset": 14860,
+                        "endLine": 195,
+                        "endColumn": 12,
+                        "endOffset": 14998
+                    }
                 }
             },
             {
                 "to": {
                     "startLine": 201,
                     "startColumn": 4,
-                    "startOffset": 14832,
+                    "startOffset": 15264,
                     "endLine": 202,
                     "endColumn": 12,
-                    "endOffset": 14962
+                    "endOffset": 15394
                 },
                 "from": {
-                    "file": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-v21/values-v21.xml"
+                    "file": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-v21/values-v21.xml",
+                    "position": {
+                        "startLine": 196,
+                        "startColumn": 4,
+                        "startOffset": 15003,
+                        "endLine": 197,
+                        "endColumn": 12,
+                        "endOffset": 15133
+                    }
                 }
             },
             {
                 "to": {
                     "startLine": 203,
                     "startColumn": 4,
-                    "startOffset": 14967,
+                    "startOffset": 15399,
                     "endLine": 204,
                     "endColumn": 12,
-                    "endOffset": 15081
+                    "endOffset": 15513
                 },
                 "from": {
-                    "file": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-v21/values-v21.xml"
+                    "file": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-v21/values-v21.xml",
+                    "position": {
+                        "startLine": 198,
+                        "startColumn": 4,
+                        "startOffset": 15138,
+                        "endLine": 199,
+                        "endColumn": 12,
+                        "endOffset": 15252
+                    }
                 }
             },
             {
                 "to": {
                     "startLine": 205,
                     "startColumn": 4,
-                    "startOffset": 15086,
+                    "startOffset": 15518,
                     "endLine": 208,
                     "endColumn": 12,
-                    "endOffset": 15282
+                    "endOffset": 15714
                 },
                 "from": {
-                    "file": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-v21/values-v21.xml"
+                    "file": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-v21/values-v21.xml",
+                    "position": {
+                        "startLine": 200,
+                        "startColumn": 4,
+                        "startOffset": 15257,
+                        "endLine": 203,
+                        "endColumn": 12,
+                        "endOffset": 15453
+                    }
                 }
             },
             {
                 "to": {
                     "startLine": 209,
                     "startColumn": 4,
-                    "startOffset": 15287,
+                    "startOffset": 15719,
                     "endLine": 210,
                     "endColumn": 12,
-                    "endOffset": 15401
+                    "endOffset": 15833
                 },
                 "from": {
-                    "file": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-v21/values-v21.xml"
+                    "file": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-v21/values-v21.xml",
+                    "position": {
+                        "startLine": 204,
+                        "startColumn": 4,
+                        "startOffset": 15458,
+                        "endLine": 205,
+                        "endColumn": 12,
+                        "endOffset": 15572
+                    }
                 }
             },
             {
                 "to": {
                     "startLine": 211,
                     "startColumn": 4,
-                    "startOffset": 15406,
+                    "startOffset": 15838,
                     "endColumn": 92,
-                    "endOffset": 15494
+                    "endOffset": 15926
                 },
                 "from": {
-                    "file": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-v21/values-v21.xml"
+                    "file": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-v21/values-v21.xml",
+                    "position": {
+                        "startLine": 206,
+                        "startColumn": 4,
+                        "startOffset": 15577,
+                        "endColumn": 92,
+                        "endOffset": 15665
+                    }
                 }
             },
             {
                 "to": {
                     "startLine": 212,
                     "startColumn": 4,
-                    "startOffset": 15499,
+                    "startOffset": 15931,
                     "endColumn": 110,
-                    "endOffset": 15605
+                    "endOffset": 16037
                 },
                 "from": {
-                    "file": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-v21/values-v21.xml"
+                    "file": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-v21/values-v21.xml",
+                    "position": {
+                        "startLine": 207,
+                        "startColumn": 4,
+                        "startOffset": 15670,
+                        "endColumn": 110,
+                        "endOffset": 15776
+                    }
                 }
             },
             {
                 "to": {
                     "startLine": 213,
                     "startColumn": 4,
-                    "startOffset": 15610,
+                    "startOffset": 16042,
                     "endColumn": 55,
-                    "endOffset": 15661
+                    "endOffset": 16093
                 },
                 "from": {
-                    "file": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-v21/values-v21.xml"
+                    "file": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-v21/values-v21.xml",
+                    "position": {
+                        "startLine": 208,
+                        "startColumn": 4,
+                        "startOffset": 15781,
+                        "endColumn": 55,
+                        "endOffset": 15832
+                    }
                 }
             },
             {
                 "to": {
                     "startLine": 214,
                     "startColumn": 4,
-                    "startOffset": 15666,
+                    "startOffset": 16098,
                     "endLine": 215,
                     "endColumn": 12,
-                    "endOffset": 15768
+                    "endOffset": 16200
                 },
                 "from": {
-                    "file": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-v21/values-v21.xml"
+                    "file": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-v21/values-v21.xml",
+                    "position": {
+                        "startLine": 209,
+                        "startColumn": 4,
+                        "startOffset": 15837,
+                        "endLine": 210,
+                        "endColumn": 12,
+                        "endOffset": 15939
+                    }
                 }
             },
             {
                 "to": {
                     "startLine": 216,
                     "startColumn": 4,
-                    "startOffset": 15773,
+                    "startOffset": 16205,
                     "endLine": 219,
                     "endColumn": 12,
-                    "endOffset": 15963
+                    "endOffset": 16395
                 },
                 "from": {
-                    "file": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-v21/values-v21.xml"
+                    "file": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-v21/values-v21.xml",
+                    "position": {
+                        "startLine": 211,
+                        "startColumn": 4,
+                        "startOffset": 15944,
+                        "endLine": 214,
+                        "endColumn": 12,
+                        "endOffset": 16134
+                    }
                 }
             },
             {
                 "to": {
                     "startLine": 220,
                     "startColumn": 4,
-                    "startOffset": 15968,
+                    "startOffset": 16400,
                     "endLine": 221,
                     "endColumn": 12,
-                    "endOffset": 16074
+                    "endOffset": 16506
                 },
                 "from": {
-                    "file": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-v21/values-v21.xml"
+                    "file": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-v21/values-v21.xml",
+                    "position": {
+                        "startLine": 215,
+                        "startColumn": 4,
+                        "startOffset": 16139,
+                        "endLine": 216,
+                        "endColumn": 12,
+                        "endOffset": 16245
+                    }
                 }
             },
             {
                 "to": {
                     "startLine": 222,
                     "startColumn": 4,
-                    "startOffset": 16079,
+                    "startOffset": 16511,
                     "endLine": 223,
                     "endColumn": 12,
-                    "endOffset": 16207
+                    "endOffset": 16639
                 },
                 "from": {
-                    "file": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-v21/values-v21.xml"
+                    "file": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-v21/values-v21.xml",
+                    "position": {
+                        "startLine": 217,
+                        "startColumn": 4,
+                        "startOffset": 16250,
+                        "endLine": 218,
+                        "endColumn": 12,
+                        "endOffset": 16378
+                    }
                 }
             },
             {
                 "to": {
                     "startLine": 224,
                     "startColumn": 4,
-                    "startOffset": 16212,
+                    "startOffset": 16644,
                     "endColumn": 94,
-                    "endOffset": 16302
+                    "endOffset": 16734
                 },
                 "from": {
-                    "file": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-v21/values-v21.xml"
+                    "file": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-v21/values-v21.xml",
+                    "position": {
+                        "startLine": 219,
+                        "startColumn": 4,
+                        "startOffset": 16383,
+                        "endColumn": 94,
+                        "endOffset": 16473
+                    }
                 }
             },
             {
                 "to": {
                     "startLine": 225,
                     "startColumn": 4,
-                    "startOffset": 16307,
+                    "startOffset": 16739,
                     "endColumn": 90,
-                    "endOffset": 16393
+                    "endOffset": 16825
                 },
                 "from": {
-                    "file": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-v21/values-v21.xml"
+                    "file": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-v21/values-v21.xml",
+                    "position": {
+                        "startLine": 220,
+                        "startColumn": 4,
+                        "startOffset": 16478,
+                        "endColumn": 90,
+                        "endOffset": 16564
+                    }
                 }
             },
             {
                 "to": {
                     "startLine": 226,
                     "startColumn": 4,
-                    "startOffset": 16398,
+                    "startOffset": 16830,
                     "endColumn": 90,
-                    "endOffset": 16484
+                    "endOffset": 16916
                 },
                 "from": {
-                    "file": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-v21/values-v21.xml"
+                    "file": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-v21/values-v21.xml",
+                    "position": {
+                        "startLine": 221,
+                        "startColumn": 4,
+                        "startOffset": 16569,
+                        "endColumn": 90,
+                        "endOffset": 16655
+                    }
                 }
             },
             {
                 "to": {
                     "startLine": 227,
                     "startColumn": 4,
-                    "startOffset": 16489,
+                    "startOffset": 16921,
                     "endColumn": 116,
-                    "endOffset": 16601
+                    "endOffset": 17033
                 },
                 "from": {
-                    "file": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-v21/values-v21.xml"
+                    "file": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-v21/values-v21.xml",
+                    "position": {
+                        "startLine": 222,
+                        "startColumn": 4,
+                        "startOffset": 16660,
+                        "endColumn": 116,
+                        "endOffset": 16772
+                    }
                 }
             },
             {
                 "to": {
                     "startLine": 228,
                     "startColumn": 4,
-                    "startOffset": 16606,
+                    "startOffset": 17038,
                     "endLine": 229,
                     "endColumn": 12,
-                    "endOffset": 16740
+                    "endOffset": 17172
                 },
                 "from": {
-                    "file": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-v21/values-v21.xml"
+                    "file": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-v21/values-v21.xml",
+                    "position": {
+                        "startLine": 223,
+                        "startColumn": 4,
+                        "startOffset": 16777,
+                        "endLine": 224,
+                        "endColumn": 12,
+                        "endOffset": 16911
+                    }
                 }
             },
             {
                 "to": {
                     "startLine": 230,
                     "startColumn": 4,
-                    "startOffset": 16745,
+                    "startOffset": 17177,
                     "endLine": 232,
                     "endColumn": 12,
-                    "endOffset": 16885
+                    "endOffset": 17317
                 },
                 "from": {
-                    "file": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/src/main/res/values-v21/styles.xml"
+                    "file": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/src/main/res/values-v21/styles.xml",
+                    "position": {
+                        "startLine": 19,
+                        "startColumn": 4,
+                        "startOffset": 745,
+                        "endLine": 21,
+                        "endColumn": 12,
+                        "endOffset": 885
+                    }
                 }
             },
             {
                 "to": {
                     "startLine": 233,
                     "startColumn": 4,
-                    "startOffset": 16890,
+                    "startOffset": 17322,
                     "endColumn": 70,
-                    "endOffset": 16956
+                    "endOffset": 17388
                 },
                 "from": {
-                    "file": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-v21/values-v21.xml"
+                    "file": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-v21/values-v21.xml",
+                    "position": {
+                        "startLine": 225,
+                        "startColumn": 4,
+                        "startOffset": 16916,
+                        "endColumn": 70,
+                        "endOffset": 16982
+                    }
                 }
             },
             {
                 "to": {
                     "startLine": 234,
                     "startColumn": 4,
-                    "startOffset": 16961,
+                    "startOffset": 17393,
                     "endColumn": 82,
-                    "endOffset": 17039
+                    "endOffset": 17471
                 },
                 "from": {
-                    "file": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-v21/values-v21.xml"
+                    "file": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-v21/values-v21.xml",
+                    "position": {
+                        "startLine": 226,
+                        "startColumn": 4,
+                        "startOffset": 16987,
+                        "endColumn": 82,
+                        "endOffset": 17065
+                    }
                 }
             },
             {
                 "to": {
                     "startLine": 235,
                     "startColumn": 4,
-                    "startOffset": 17044,
+                    "startOffset": 17476,
                     "endLine": 244,
                     "endColumn": 12,
-                    "endOffset": 17662
+                    "endOffset": 18151
                 },
                 "from": {
-                    "file": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-v21/values-v21.xml"
+                    "file": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-v21/values-v21.xml",
+                    "position": {
+                        "startLine": 227,
+                        "startColumn": 4,
+                        "startOffset": 17070,
+                        "endLine": 236,
+                        "endColumn": 12,
+                        "endOffset": 17745
+                    }
                 }
             },
             {
                 "to": {
                     "startLine": 245,
                     "startColumn": 4,
-                    "startOffset": 17667,
+                    "startOffset": 18156,
                     "endColumn": 56,
-                    "endOffset": 17719
+                    "endOffset": 18208
                 },
                 "from": {
-                    "file": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-v21/values-v21.xml"
+                    "file": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-v21/values-v21.xml",
+                    "position": {
+                        "startLine": 237,
+                        "startColumn": 4,
+                        "startOffset": 17750,
+                        "endColumn": 56,
+                        "endOffset": 17802
+                    }
                 }
             },
             {
                 "to": {
                     "startLine": 246,
                     "startColumn": 4,
-                    "startOffset": 17724,
+                    "startOffset": 18213,
                     "endColumn": 57,
-                    "endOffset": 17777
+                    "endOffset": 18266
                 },
                 "from": {
-                    "file": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-v21/values-v21.xml"
+                    "file": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-v21/values-v21.xml",
+                    "position": {
+                        "startLine": 238,
+                        "startColumn": 4,
+                        "startOffset": 17807,
+                        "endColumn": 57,
+                        "endOffset": 17860
+                    }
                 }
             },
             {
                 "to": {
                     "startLine": 247,
                     "startColumn": 4,
-                    "startOffset": 17782,
+                    "startOffset": 18271,
                     "endLine": 258,
                     "endColumn": 12,
-                    "endOffset": 18401
+                    "endOffset": 18960
                 },
                 "from": {
-                    "file": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-v21/values-v21.xml"
+                    "file": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-v21/values-v21.xml",
+                    "position": {
+                        "startLine": 239,
+                        "startColumn": 4,
+                        "startOffset": 17865,
+                        "endLine": 250,
+                        "endColumn": 12,
+                        "endOffset": 18554
+                    }
                 }
             },
             {
                 "to": {
                     "startLine": 259,
                     "startColumn": 4,
-                    "startOffset": 18406,
+                    "startOffset": 18965,
                     "endLine": 270,
                     "endColumn": 12,
-                    "endOffset": 19037
+                    "endOffset": 19666
                 },
                 "from": {
-                    "file": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-v21/values-v21.xml"
+                    "file": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-v21/values-v21.xml",
+                    "position": {
+                        "startLine": 251,
+                        "startColumn": 4,
+                        "startOffset": 18559,
+                        "endLine": 262,
+                        "endColumn": 12,
+                        "endOffset": 19260
+                    }
                 }
             },
             {
                 "to": {
                     "startLine": 271,
                     "startColumn": 4,
-                    "startOffset": 19042,
+                    "startOffset": 19671,
                     "endLine": 273,
                     "endColumn": 12,
-                    "endOffset": 19196
+                    "endOffset": 19825
                 },
                 "from": {
-                    "file": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/src/main/res/values-v21/styles.xml"
+                    "file": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/src/main/res/values-v21/styles.xml",
+                    "position": {
+                        "startLine": 10,
+                        "startColumn": 4,
+                        "startOffset": 365,
+                        "endLine": 12,
+                        "endColumn": 12,
+                        "endOffset": 519
+                    }
                 }
             },
             {
                 "to": {
                     "startLine": 274,
                     "startColumn": 4,
-                    "startOffset": 19201,
+                    "startOffset": 19830,
                     "endLine": 276,
                     "endColumn": 12,
-                    "endOffset": 19355
+                    "endOffset": 19984
                 },
                 "from": {
-                    "file": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/src/main/res/values-v21/styles.xml"
+                    "file": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/src/main/res/values-v21/styles.xml",
+                    "position": {
+                        "startLine": 15,
+                        "startColumn": 4,
+                        "startOffset": 585,
+                        "endLine": 17,
+                        "endColumn": 12,
+                        "endOffset": 739
+                    }
                 }
             },
             {
                 "to": {
                     "startLine": 277,
                     "startColumn": 4,
-                    "startOffset": 19360,
+                    "startOffset": 19989,
                     "endColumn": 118,
-                    "endOffset": 19474
+                    "endOffset": 20103
                 },
                 "from": {
-                    "file": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-v21/values-v21.xml"
+                    "file": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-v21/values-v21.xml",
+                    "position": {
+                        "startLine": 263,
+                        "startColumn": 4,
+                        "startOffset": 19265,
+                        "endColumn": 118,
+                        "endOffset": 19379
+                    }
                 }
             },
             {
                 "to": {
                     "startLine": 278,
                     "startColumn": 4,
-                    "startOffset": 19479,
+                    "startOffset": 20108,
                     "endColumn": 128,
-                    "endOffset": 19603
+                    "endOffset": 20232
                 },
                 "from": {
-                    "file": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-v21/values-v21.xml"
+                    "file": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-v21/values-v21.xml",
+                    "position": {
+                        "startLine": 264,
+                        "startColumn": 4,
+                        "startOffset": 19384,
+                        "endColumn": 128,
+                        "endOffset": 19508
+                    }
                 }
             },
             {
                 "to": {
                     "startLine": 279,
                     "startColumn": 4,
-                    "startOffset": 19608,
+                    "startOffset": 20237,
                     "endLine": 281,
                     "endColumn": 12,
-                    "endOffset": 19774
+                    "endOffset": 20403
                 },
                 "from": {
-                    "file": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-v21/values-v21.xml"
+                    "file": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-v21/values-v21.xml",
+                    "position": {
+                        "startLine": 265,
+                        "startColumn": 4,
+                        "startOffset": 19513,
+                        "endLine": 267,
+                        "endColumn": 12,
+                        "endOffset": 19679
+                    }
                 }
             },
             {
                 "to": {
                     "startLine": 282,
                     "startColumn": 4,
-                    "startOffset": 19779,
+                    "startOffset": 20408,
                     "endLine": 284,
                     "endColumn": 12,
-                    "endOffset": 19940
+                    "endOffset": 20569
                 },
                 "from": {
-                    "file": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-v21/values-v21.xml"
+                    "file": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-v21/values-v21.xml",
+                    "position": {
+                        "startLine": 268,
+                        "startColumn": 4,
+                        "startOffset": 19684,
+                        "endLine": 270,
+                        "endColumn": 12,
+                        "endOffset": 19845
+                    }
                 }
             },
             {
                 "to": {
                     "startLine": 285,
                     "startColumn": 4,
-                    "startOffset": 19945,
+                    "startOffset": 20574,
                     "endColumn": 128,
-                    "endOffset": 20069
+                    "endOffset": 20698
                 },
                 "from": {
-                    "file": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-v21/values-v21.xml"
+                    "file": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-v21/values-v21.xml",
+                    "position": {
+                        "startLine": 271,
+                        "startColumn": 4,
+                        "startOffset": 19850,
+                        "endColumn": 128,
+                        "endOffset": 19974
+                    }
                 }
             },
             {
                 "to": {
                     "startLine": 286,
                     "startColumn": 4,
-                    "startOffset": 20074,
+                    "startOffset": 20703,
                     "endLine": 288,
                     "endColumn": 12,
-                    "endOffset": 20240
+                    "endOffset": 20869
                 },
                 "from": {
-                    "file": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-v21/values-v21.xml"
+                    "file": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-v21/values-v21.xml",
+                    "position": {
+                        "startLine": 272,
+                        "startColumn": 4,
+                        "startOffset": 19979,
+                        "endLine": 274,
+                        "endColumn": 12,
+                        "endOffset": 20145
+                    }
                 }
             },
             {
                 "to": {
                     "startLine": 289,
                     "startColumn": 4,
-                    "startOffset": 20245,
+                    "startOffset": 20874,
                     "endColumn": 130,
-                    "endOffset": 20371
+                    "endOffset": 21000
                 },
                 "from": {
-                    "file": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-v21/values-v21.xml"
+                    "file": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-v21/values-v21.xml",
+                    "position": {
+                        "startLine": 275,
+                        "startColumn": 4,
+                        "startOffset": 20150,
+                        "endColumn": 130,
+                        "endOffset": 20276
+                    }
                 }
             },
             {
                 "to": {
                     "startLine": 290,
                     "startColumn": 4,
-                    "startOffset": 20376,
+                    "startOffset": 21005,
                     "endLine": 292,
                     "endColumn": 12,
-                    "endOffset": 20541
+                    "endOffset": 21170
                 },
                 "from": {
-                    "file": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-v21/values-v21.xml"
+                    "file": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-v21/values-v21.xml",
+                    "position": {
+                        "startLine": 276,
+                        "startColumn": 4,
+                        "startOffset": 20281,
+                        "endLine": 278,
+                        "endColumn": 12,
+                        "endOffset": 20446
+                    }
                 }
             },
             {
                 "to": {
                     "startLine": 293,
                     "startColumn": 4,
-                    "startOffset": 20546,
+                    "startOffset": 21175,
                     "endLine": 295,
                     "endColumn": 12,
-                    "endOffset": 20716
+                    "endOffset": 21345
                 },
                 "from": {
-                    "file": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-v21/values-v21.xml"
+                    "file": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-v21/values-v21.xml",
+                    "position": {
+                        "startLine": 279,
+                        "startColumn": 4,
+                        "startOffset": 20451,
+                        "endLine": 281,
+                        "endColumn": 12,
+                        "endOffset": 20621
+                    }
                 }
             },
             {
                 "to": {
                     "startLine": 296,
                     "startColumn": 4,
-                    "startOffset": 20721,
+                    "startOffset": 21350,
                     "endLine": 300,
                     "endColumn": 12,
-                    "endOffset": 21057
+                    "endOffset": 21686
                 },
                 "from": {
-                    "file": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-v21/values-v21.xml"
+                    "file": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/res/values-v21/values-v21.xml",
+                    "position": {
+                        "startLine": 282,
+                        "startColumn": 4,
+                        "startOffset": 20626,
+                        "endLine": 286,
+                        "endColumn": 12,
+                        "endOffset": 20962
+                    }
                 }
             },
             {
                 "to": {
                     "startLine": 301,
                     "startColumn": 4,
-                    "startOffset": 21062,
+                    "startOffset": 21691,
                     "endLine": 303,
                     "endColumn": 12,
-                    "endOffset": 21255
+                    "endOffset": 21884
                 },
                 "from": {
-                    "file": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/design/25.3.1/res/values-v21/values-v21.xml"
+                    "file": "/home/xlmnxp/Documents/Nativescript/ngChatClient/platforms/android/build/intermediates/exploded-aar/com.android.support/design/25.3.1/res/values-v21/values-v21.xml",
+                    "position": {
+                        "startLine": 2,
+                        "startColumn": 4,
+                        "startOffset": 55,
+                        "endLine": 4,
+                        "endColumn": 12,
+                        "endOffset": 248
+                    }
                 }
             }
         ]

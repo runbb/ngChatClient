@@ -17,12 +17,12 @@
     "fetchSpec": "4.0.0"
   },
   "_requiredBy": [
-    "/nativescript-template-ng-tutorial"
+    "/"
   ],
   "_resolved": "https://registry.npmjs.org/@angular/platform-browser/-/platform-browser-4.0.0.tgz",
   "_shasum": "512ae9ab19ccc25fa79027f44e291bcee236cd2b",
   "_spec": "@angular/platform-browser@4.0.0",
-  "_where": "/home/xlmnxp/Documents/Nativescript/ngChatClient/node_modules/nativescript-template-ng-tutorial",
+  "_where": "/home/xlmnxp/Documents/Nativescript/ngChatClient",
   "author": {
     "name": "angular"
   },

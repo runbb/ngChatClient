@@ -5,7 +5,7 @@ import { Page } from "ui/page";
 import { ListView } from "ui/list-view";
 import { TextField } from "ui/text-field";
 import { TabViewItem } from "ui/tab-view";
-import { setTimeout } from 'timer'
+import { setTimeout , clearTimeout } from 'timer';
 import { Observable, Subject } from 'rxjs';
 
 import { Connection } from "./services/connection";
@@ -45,32 +45,8 @@ export class MainComponent{
     this.connect.rooms = [];
     this.connect.connected.next(false);
 
-  }
-
-  connection(){
-    this.connect.connected.next(false);
-    var server:TextField = <TextField> this.page.getViewById("serverip");
-    var username:TextField = <TextField> this.page.getViewById("username");
-    var password:TextField = <TextField> this.page.getViewById("password");
-    this.connect.server = server.text;
-
-    this.connect.socket = connect(this.connect.server, <SocketOptions> { transports: ['polling', 'websocket'] });
-    this.connect.socket.on('connect', () => {
-      this.connect.connected.next(true);
-
-      var notifications:ListView = <ListView> this.page.getViewById("listNotifications");
-      this.connect.notifications.unshift(new Notification(this.connect.server + 'pic.png','تم الاتصال بنجاح'));
-      notifications.refresh();
-
-      this.connect.socket.emit('msg', {cmd: "login" , data:{
-        username: username.text,
-        password: password.text,
-        stealth: true,
-        fp: this.connect.connection_name, 
-        refr: this.connect.connection_name, 
-        r: this.connect.connection_name
-      }});
-    });
+    // var notifications:ListView = <ListView> this.page.getViewById("listNotifications");
+    // notifications.refresh();
 
     this.connect.socket.on('msg', (data) => {
       this.connect.connected.next(true);
@@ -128,25 +104,28 @@ export class MainComponent{
 
         this.connect.messages.push( new Message((user || {id: ""}).id ,this.connect.server + data.data.pic, sico, data.data.ico != '' ? this.connect.server + "dro3/" + data.data.ico : '', _unescape(data.data.topic), _unescape(data.data.msg.replace(/<\/?[^>]+(>|$)/g, ""))
                                         , data.data.bg, data.data.ucol, data.data.mcol) );
-        messages.refresh();  
-        
-        if (messages.ios) {
-            messages.ios.scrollToRowAtIndexPathAtScrollPositionAnimated(
-                NSIndexPath.indexPathForItemInSection(this.connect.messages.length-1, 0),
-                UITableViewScrollPosition.UITableViewScrollPositionTop,
-                true
-            );
-        }
-        else {
-            messages.scrollToIndex(this.connect.messages.length-1); 
-        }
+        try{
+          messages.refresh();  
+          if (messages.ios) {
+              messages.ios.scrollToRowAtIndexPathAtScrollPositionAnimated(
+                  NSIndexPath.indexPathForItemInSection(this.connect.messages.length-1, 0),
+                  UITableViewScrollPosition.UITableViewScrollPositionTop,
+                  true
+              );
+          }
+          else {
+              messages.scrollToIndex(this.connect.messages.length-1); 
+          }
+        }catch(e){}
       }
 
       if (data.cmd == "not"){ // notifications
         var notifications:ListView = <ListView> this.page.getViewById("listNotifications");
         var user = this.connect.users.filter(value => value.id == data.data.user)[0] || { pic: "" };
         this.connect.notifications.unshift(new Notification(this.connect.server + user.pic,_unescape(data.data.msg.replace(/<\/?[^>]+(>|$)/g, ""))));
-        notifications.refresh();
+        try{
+          notifications.refresh();
+        }catch(e){}
       }
 
       if(data.cmd == "ulist"){ // users online
@@ -190,7 +169,9 @@ export class MainComponent{
 
           this.connect.users.push(element);          
         });
-        onlines.refresh();
+        try{
+          onlines.refresh();
+        }catch(e){}
         this.updateUsers(onlines);
       }
 
@@ -198,8 +179,10 @@ export class MainComponent{
         var onlines:ListView = <ListView> this.page.getViewById("listOnline");
         var rooms:ListView = <ListView> this.page.getViewById("listRooms");
         this.connect.users.splice(this.connect.users.indexOf(this.connect.users.filter(v => v.id == data.data)[0]), 1);
-        onlines.refresh();
-        rooms.refresh();
+        try{
+          onlines.refresh();
+          rooms.refresh();
+        }catch(e){}
       }
 
       if(data.cmd == "u+"){ // user join
@@ -242,8 +225,10 @@ export class MainComponent{
 
         data.data.sico  = sico;
         this.connect.users.push(data.data);
-        onlines.refresh();
-        rooms.refresh();
+        try{
+          onlines.refresh();
+          rooms.refresh();
+        }catch(e){}
       }
 
       if(data.cmd == "u^"){ // user edit
@@ -287,8 +272,10 @@ export class MainComponent{
         data.data.sico  = sico;
 
         this.connect.users.push(data.data);
-        onlines.refresh();
-        rooms.refresh();
+        try{
+          onlines.refresh();
+          rooms.refresh();
+        }catch(e){}
       }
 
       if(data.cmd == "ur"){ // user join room
@@ -305,8 +292,10 @@ export class MainComponent{
           }
         }
         user.roomid = data.data[1];
-        onlines.refresh();
-        rooms.refresh();
+        try{
+          onlines.refresh();
+          rooms.refresh();
+        }catch(e){}
       }
 
       if(data.cmd == "powers"){ // powers
@@ -365,18 +354,20 @@ export class MainComponent{
 
         this.connect.broadcasts.unshift( new Message((user || {id: ""}).id , this.connect.server + data.data.pic, sico, data.data.ico != '' ? this.connect.server + "dro3/" + data.data.ico : '', _unescape(data.data.topic), _unescape(data.data.msg.replace(/<\/?[^>]+(>|$)/g, ""))
                                         , data.data.bg, data.data.ucol, data.data.mcol) );
-        broadcasts.refresh();  
-        
-        if (broadcasts.ios) {
-            broadcasts.ios.scrollToRowAtIndexPathAtScrollPositionAnimated(
-                NSIndexPath.indexPathForItemInSection(0, 0),
-                UITableViewScrollPosition.UITableViewScrollPositionTop,
-                true
-            );
-        }
-        else {
-            broadcasts.scrollToIndex(0);
-        }
+
+        try{
+          broadcasts.refresh();
+          if (broadcasts.ios) {
+              broadcasts.ios.scrollToRowAtIndexPathAtScrollPositionAnimated(
+                  NSIndexPath.indexPathForItemInSection(0, 0),
+                  UITableViewScrollPosition.UITableViewScrollPositionTop,
+                  true
+              );
+          }
+          else {
+              broadcasts.scrollToIndex(0);
+          }
+        }catch(e){}
       }
 
       if(data.cmd == "rlist"){ // rooms list
@@ -385,27 +376,35 @@ export class MainComponent{
           element.online = 0;
           this.connect.rooms.push(element);          
         });
-        rooms.refresh();
+        try{
+          rooms.refresh();
+        }catch(e){}
         this.updateRooms();
       }
 
       if(data.cmd == "r+"){ // add room
         var rooms:ListView = <ListView> this.page.getViewById("listRooms");
         this.connect.rooms.push(data.data);
-        rooms.refresh();
+        try{
+          rooms.refresh();
+        }catch(e){}
       }
 
       if(data.cmd == "r-"){ // remove room
         var rooms:ListView = <ListView> this.page.getViewById("listRooms");
         this.connect.rooms.splice(this.connect.rooms.indexOf(this.connect.rooms.filter(v => v.id == data.data.id)[0]), 1);
-        rooms.refresh();
+        try{
+          rooms.refresh();
+        }catch(e){}
       }
 
       if(data.cmd == "r^"){ // room edit
         var rooms:ListView = <ListView> this.page.getViewById("listRooms");
         this.connect.rooms.splice(this.connect.rooms.indexOf(this.connect.rooms.filter(v => v.id == data.data.id)[0]), 1);
         this.connect.rooms.push(data.data);
-        rooms.refresh();
+        try{
+          rooms.refresh();
+        }catch(e){}
       }
     });
 
@@ -419,9 +418,17 @@ export class MainComponent{
       this.connect.rooms = []; 
       var notifications:ListView = <ListView> this.page.getViewById("listNotifications");
       this.connect.notifications.unshift(new Notification(this.connect.server + 'pic.png','اوه لا !! انقطع الاتصال'));
-      notifications.refresh();
+
+      dialogs.alert({
+        title: "خطأ",
+        message: 'اوه لا !! انقطع الاتصال'
+      });
+
+      try{
+        notifications.refresh();
+      }catch(e){}
     });
-    this.connect.socket.on('connect_error', (data) => {
+    this.connect.socket.on('connect_error', (data) => {      
       this.connect.connected.next(false);
 
       this.connect.messages = [];
@@ -431,9 +438,17 @@ export class MainComponent{
       this.connect.rooms = []; 
       var notifications:ListView = <ListView> this.page.getViewById("listNotifications");
       this.connect.notifications.unshift(new Notification(this.connect.server + 'pic.png','اوه لا !! خطأ في الاتصال'));
-      notifications.refresh();  
+
+      dialogs.alert({
+        title: "خطأ",
+        message: 'اوه لا !! خطأ في الاتصال'
+      });
+
+      try{
+        notifications.refresh();  
+      }catch(e){}
     });
-    this.connect.socket.on('connect_timeout', (data) => { 
+    this.connect.socket.on('connect_timeout', (data) => {       
       this.connect.connected.next(false);
 
       this.connect.messages = [];
@@ -443,9 +458,17 @@ export class MainComponent{
       this.connect.rooms = []; 
       var notifications:ListView = <ListView> this.page.getViewById("listNotifications");
       this.connect.notifications.unshift(new Notification(this.connect.server + 'pic.png','اوه لا !! لا يمكنني الاتصال بالخادم'));
-      notifications.refresh();
+
+      dialogs.alert({
+        title: "خطأ",
+        message: 'اوه لا !! لا يمكنني الاتصال بالخادم'
+      });
+
+      try{
+        notifications.refresh();
+      }catch(e){}
     });
-    this.connect.socket.on('reconnect_attempt', (data) => { 
+    this.connect.socket.on('reconnect_attempt', (data) => {      
       this.connect.connected.next(false);
 
       this.connect.messages = [];
@@ -455,7 +478,15 @@ export class MainComponent{
       this.connect.rooms = []; 
       var notifications:ListView = <ListView> this.page.getViewById("listNotifications");
       this.connect.notifications.unshift(new Notification(this.connect.server + 'pic.png','انا اقوم باعادة الاتصال بالخادم الان'));
-      notifications.refresh();
+
+      dialogs.alert({
+        title: "خطأ",
+        message: 'انا اقوم باعادة الاتصال بالخادم الان'
+      });
+
+      try{
+        notifications.refresh();
+      }catch(e){}
     });
     this.connect.socket.on('error', (data) => { 
       this.connect.connected.next(false);
@@ -467,7 +498,15 @@ export class MainComponent{
       this.connect.rooms = []; 
       var notifications:ListView = <ListView> this.page.getViewById("listNotifications");
       this.connect.notifications.unshift(new Notification(this.connect.server + 'pic.png','اوه لا !! حدث خطأ ما'));
-      notifications.refresh();
+
+      dialogs.alert({
+        title: "خطأ",
+        message: 'اوه لا !! حدث خطأ ما'
+      });
+
+      try{
+        notifications.refresh();
+      }catch(e){}
     });
 
   }
@@ -536,6 +575,15 @@ export class MainComponent{
         "\n" + 
         JSON.stringify(room,null,4));
     }
+    var options = {
+        title: "Race Selection",
+        message: "Choose your race",
+        cancelButtonText: "Cancel",
+        actions: ["Human", "Elf", "Dwarf", "Orc"]
+    };
+    dialogs.action(options).then((result) => { 
+        console.log(result);
+    });
   }
 
   updateRooms (rooms?:ListView){ // refresh room online users
@@ -550,8 +598,10 @@ export class MainComponent{
       this.connect.rooms[index].online = usersRoom.length;
     });
 
-    rooms.refresh()
-    
+    try{
+      rooms.refresh()
+    }catch(e){}
+  
     setTimeout(()=>{
       this.updateRooms(rooms);
     },1000);
@@ -590,8 +640,10 @@ export class MainComponent{
 
     });
 
-    users.refresh()
-    
+    try{
+      users.refresh()
+    }catch(e){}
+
     setTimeout(()=>{
       this.updateUsers(users);
     },1000);

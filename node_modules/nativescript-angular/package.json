@@ -1,27 +1,27 @@
 {
-  "_from": "nativescript-angular@~3.0.0",
+  "_from": "nativescript-angular@3.0.0",
   "_id": "nativescript-angular@3.0.0",
   "_inBundle": false,
   "_integrity": "sha1-QBxerolcIqRAEMFvRDkQ0qpa9u4=",
   "_location": "/nativescript-angular",
   "_phantomChildren": {},
   "_requested": {
-    "type": "range",
+    "type": "version",
     "registry": true,
-    "raw": "nativescript-angular@~3.0.0",
+    "raw": "nativescript-angular@3.0.0",
     "name": "nativescript-angular",
     "escapedName": "nativescript-angular",
-    "rawSpec": "~3.0.0",
+    "rawSpec": "3.0.0",
     "saveSpec": null,
-    "fetchSpec": "~3.0.0"
+    "fetchSpec": "3.0.0"
   },
   "_requiredBy": [
-    "/nativescript-template-ng-tutorial"
+    "/"
   ],
   "_resolved": "https://registry.npmjs.org/nativescript-angular/-/nativescript-angular-3.0.0.tgz",
   "_shasum": "401c5eae895c22a44010c16f443910d2aa5af6ee",
-  "_spec": "nativescript-angular@~3.0.0",
-  "_where": "/home/xlmnxp/Documents/Nativescript/ngChatClient/node_modules/nativescript-template-ng-tutorial",
+  "_spec": "nativescript-angular@3.0.0",
+  "_where": "/home/xlmnxp/Documents/Nativescript/ngChatClient",
   "author": {
     "name": "NativeScript Team"
   },
