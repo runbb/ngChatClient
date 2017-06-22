@@ -38,7 +38,7 @@ export class Connection {
   public rooms: Array<any>;
   public room: any;
   public powers: Array<any>;
-  public server: string = "http://khaleejchat.com/";
+  public server: string = "";
 
   public socket;
   public userid: string;

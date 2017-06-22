@@ -23,13 +23,13 @@
             </ng-template>
         </ListView>
         <GridLayout row="1" columns="100,*">
-            <button col="0" text="ارسال" (tap)="sendMessage()"></button>
+            <button col="0" class="btn btn-primary" text="ارسال" (tap)="sendMessage()"></button>
             <TextField  col="1" id="messageinput" returnKeyType="send"  (returnPress)="sendMessage()" height="100"></TextField>
         </GridLayout>
     </GridLayout>
     <GridLayout class="tab-view" rows="50,*" *tabItem="{title: 'الحائط', iconSource: 'res://logo_white_bg'}">
         <GridLayout row="0" columns="100,*">
-            <button col="0" text="ارسال" (tap)="sendBroadcast()"></button>
+            <button col="0" class="btn btn-primary" text="ارسال" (tap)="sendBroadcast()"></button>
             <TextField  col="1" id="broadcastinput" returnKeyType="send"  (returnPress)="sendBroadcast()" height="100"></TextField>
         </GridLayout>
         <ListView row="1" id="listBroadcast" [items]="connect.broadcasts" >
@@ -64,9 +64,9 @@
                 <GridLayout columns="100,*">
                     <image col="0" class="message" [src]='connect.server+item.pic' height="100"></image>
                     <GridLayout col="1" rows="*,*">
-                        <GridLayout row="0" columns="*,auto">
-                            <button col="0" [text]='item.topic' (tap)='joinRoom($event,item.id)'></button>                            
-                            <label  col="1" [text]='item.online + " / " + item.max' class="message" style='vertical-align: center;'></label>
+                        <GridLayout row="0" columns="*,70">
+                            <button col="0" [text]='item.topic' class="btn btn-primary" (tap)='joinRoom($event,item.id)'></button>                            
+                            <label  col="1" [text]='item.online + " / " + item.max' class="message" style='vertical-align: center;text-align: center;'></label>
                         </GridLayout>
                         <label  row="1" [text]='item.about' textWrap="true" class="message"></label>
                     </GridLayout>

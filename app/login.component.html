@@ -2,11 +2,12 @@
 <StackLayout>
     <ListPicker id="serverslist" [items]="servers"></ListPicker>
 
-    <label text="الخادم" class="message"></label>
-    <TextField id="serverip" [text]="connect.server" class="message"></TextField>
+    <!--<label text="الخادم" class="message"></label>
+    <TextField id="serverip" [text]="connect.server" class="message"></TextField>-->
     <label text="اسم المستخدم" class="message"></label>
     <TextField id="username" text="" class="message"></TextField>
     <label text="كلمة السر" class="message"></label>
     <TextField id="password" text="" secure="true" class="message"></TextField>
-    <button text="تسجيل الدخول" (tap)="connection()"></button>
+    <button text="تسجيل الدخول" class="btn btn-primary" (tap)="connection('user')"></button>
+    <button text="تسجيل الدخول كضيف" class="btn btn-primary" (tap)="connection('guest')"></button>
 </StackLayout>

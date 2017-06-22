@@ -26,9 +26,9 @@ class Notification{
 })
 export class LoginComponent{
     servers: string[] = [
-    "http://3ch8.com/",
-    "http://flhchat.com/",
-    "http://khaleejchat.com/",
+        "http://3ch8.com/",
+        "http://flhchat.com/",
+        "http://khaleejchat.com/",
     ];
 
     constructor(public page:Page, private connect:Connection, public router:Router){
@@ -41,7 +41,7 @@ export class LoginComponent{
         this.connect.connected.next(false);
     }
 
-    connection(){
+    connection(type: string){
         this.connect.connected.next(false);
         var server:TextField = <TextField> this.page.getViewById("serverip");
         var username:TextField = <TextField> this.page.getViewById("username");
@@ -55,16 +55,27 @@ export class LoginComponent{
         this.connect.socket.on('connect', () => {
             this.connect.connected.next(true);
             this.connect.notifications.unshift(new Notification(this.connect.server + 'pic.png','تم الاتصال بنجاح'));
-
-            this.connect.socket.emit('msg', {cmd: "login" , data:{
-            username: username.text,
-            password: password.text,
-            stealth: true,
-            fp: this.connect.connection_name, 
-            refr: this.connect.connection_name, 
-            r: this.connect.connection_name
-            }});
-            this.router.navigate(['main']);      
+            if(type == 'user'){
+                this.connect.socket.emit('msg', {cmd: "login" , data:{
+                    username: username.text,
+                    password: password.text,
+                    stealth: true,
+                    fp: this.connect.connection_name, 
+                    refr: this.connect.connection_name, 
+                    r: this.connect.connection_name,
+                    uprofile: {}
+                }});
+                this.router.navigate(['main']);
+            }else if(type == 'guest'){
+                this.connect.socket.emit('msg', {cmd: "login" , data:{
+                    username: username.text,
+                    fp: this.connect.connection_name, 
+                    refr: this.connect.connection_name, 
+                    r: this.connect.connection_name,
+                    uprofile: {}
+                }});
+                this.router.navigate(['main']);
+            }
         });
 
         this.connect.socket.on('error', () => {

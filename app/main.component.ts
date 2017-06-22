@@ -56,8 +56,56 @@ export class MainComponent{
       }
 
       if(data.cmd == "login"){ // on login to server
-        if(data.data.msg = "ok"){
-          this.connect.userid = data.data.id;
+        switch(data.data.msg){
+          case "ok":
+            this.connect.userid = data.data.id;
+            dialogs.alert({
+              title: "تسجيل الدخول",
+              message: 'تم تسجيل الدخول بشكل صحيح'
+            });
+          break;
+          case "ok":
+            this.connect.userid = data.data.id;
+            dialogs.alert({
+              title: "تسجيل الدخول",
+              message: 'تم تسجيل الدخول بشكل صحيح'
+            });
+          break;
+          case "badname":
+            this.connect.userid = data.data.id;
+            dialogs.alert({
+              title: "تسجيل الدخول",
+              message: 'يرجى إختيار أسم آخر'
+            });
+          break;
+          case "usedname":
+            this.connect.userid = data.data.id;
+            dialogs.alert({
+              title: "تسجيل الدخول",
+              message: 'هذا الإسم مسجل من قبل'
+            });
+          break;
+          case "badpass":
+            this.connect.userid = data.data.id;
+            dialogs.alert({
+              title: "تسجيل الدخول",
+              message: 'كلمه المرور غير مناسبه'
+            });
+          break;
+          case "wrong":
+            this.connect.userid = data.data.id;
+            dialogs.alert({
+              title: "تسجيل الدخول",
+              message: 'كلمه المرور غير صحيحه'
+            });
+          break;
+          case "reg":
+            this.connect.userid = data.data.id;
+            dialogs.alert({
+              title: "تسجيل الدخول",
+              message: 'تم تسجيل العضويه بنجاح !'
+            });
+          break;
         }
       }
 
@@ -182,6 +230,7 @@ export class MainComponent{
         try{
           onlines.refresh();
           rooms.refresh();
+          this.updateRooms(rooms);
         }catch(e){}
       }
 
@@ -228,6 +277,7 @@ export class MainComponent{
         try{
           onlines.refresh();
           rooms.refresh();
+          this.updateRooms(rooms);
         }catch(e){}
       }
 
@@ -275,6 +325,7 @@ export class MainComponent{
         try{
           onlines.refresh();
           rooms.refresh();
+          this.updateRooms(rooms);
         }catch(e){}
       }
 
@@ -295,6 +346,7 @@ export class MainComponent{
         try{
           onlines.refresh();
           rooms.refresh();
+          this.updateRooms(rooms);
         }catch(e){}
       }
 
@@ -378,8 +430,8 @@ export class MainComponent{
         });
         try{
           rooms.refresh();
+          this.updateRooms(rooms);
         }catch(e){}
-        this.updateRooms();
       }
 
       if(data.cmd == "r+"){ // add room
@@ -387,6 +439,7 @@ export class MainComponent{
         this.connect.rooms.push(data.data);
         try{
           rooms.refresh();
+          this.updateRooms(rooms);
         }catch(e){}
       }
 
@@ -395,6 +448,7 @@ export class MainComponent{
         this.connect.rooms.splice(this.connect.rooms.indexOf(this.connect.rooms.filter(v => v.id == data.data.id)[0]), 1);
         try{
           rooms.refresh();
+          this.updateRooms(rooms);
         }catch(e){}
       }
 
@@ -404,6 +458,7 @@ export class MainComponent{
         this.connect.rooms.push(data.data);
         try{
           rooms.refresh();
+          this.updateRooms(rooms);
         }catch(e){}
       }
     });
@@ -562,7 +617,12 @@ export class MainComponent{
         alert(JSON.stringify(this.connect.user,null,4) + "\n" + JSON.stringify(this.connect.room,null,4));
     }else{
         var user = this.connect.users.filter(v=> v.id == id)[0];
-        var room = this.connect.rooms.filter(v=> v.id == user.roomid)[0];
+        var room;
+        if(user){
+          room = this.connect.rooms.filter(v=> v.id == user.roomid)[0];
+        }else{
+          room = this.connect.rooms[0];          
+        }
 
         if(user == undefined){
           dialogs.alert({
@@ -601,10 +661,6 @@ export class MainComponent{
     try{
       rooms.refresh()
     }catch(e){}
-  
-    setTimeout(()=>{
-      this.updateRooms(rooms);
-    },1000);
   }
 
   updateUsers (users?:ListView){ // refresh room online users

@@ -1,8 +1,4 @@
-/*.message{
-    font-size: 21px;
-    margin-left: 3px;
-    margin-right: 3px;
-}*/
+@import "~/theme.css";
 
 #listBroadcast ng-template,#listMessages ng-template{
     border-bottom-color: transparent;
