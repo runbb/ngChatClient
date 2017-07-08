@@ -1,5 +1,6 @@
 import { Component } from "@angular/core";
 import { Router } from "@angular/router";
+import { RouterExtensions } from "nativescript-angular/router"
 import { connect,SocketOptions } from "nativescript-socket.io";
 import { Page } from "ui/page";
 import { ListView } from "ui/list-view";
@@ -36,7 +37,7 @@ function _unescape(code:string): string{
   templateUrl: 'main.component.html'
 })
 export class MainComponent{
-  constructor(public page:Page, private connect:Connection, public router:Router){
+  constructor(public page:Page, private connect:Connection, public router:Router,private routerExtensions: RouterExtensions){
     this.connect.messages = [];
     this.connect.notifications = [];
     this.connect.users = [];
@@ -63,13 +64,7 @@ export class MainComponent{
               title: "تسجيل الدخول",
               message: 'تم تسجيل الدخول بشكل صحيح'
             });
-          break;
-          case "ok":
-            this.connect.userid = data.data.id;
-            dialogs.alert({
-              title: "تسجيل الدخول",
-              message: 'تم تسجيل الدخول بشكل صحيح'
-            });
+            this.router.navigate(['main']);
           break;
           case "badname":
             this.connect.userid = data.data.id;
@@ -77,20 +72,23 @@ export class MainComponent{
               title: "تسجيل الدخول",
               message: 'يرجى إختيار أسم آخر'
             });
+            this.routerExtensions.back();
           break;
           case "usedname":
             this.connect.userid = data.data.id;
             dialogs.alert({
-              title: "تسجيل الدخول",
+              title: "التسجيل",
               message: 'هذا الإسم مسجل من قبل'
             });
+            this.routerExtensions.back();
           break;
           case "badpass":
             this.connect.userid = data.data.id;
             dialogs.alert({
-              title: "تسجيل الدخول",
+              title: "التسجيل",
               message: 'كلمه المرور غير مناسبه'
             });
+            this.routerExtensions.back();
           break;
           case "wrong":
             this.connect.userid = data.data.id;
@@ -98,11 +96,12 @@ export class MainComponent{
               title: "تسجيل الدخول",
               message: 'كلمه المرور غير صحيحه'
             });
+            this.routerExtensions.back();
           break;
           case "reg":
             this.connect.userid = data.data.id;
             dialogs.alert({
-              title: "تسجيل الدخول",
+              title: "التسجيل",
               message: 'تم تسجيل العضويه بنجاح !'
             });
           break;
@@ -137,7 +136,7 @@ export class MainComponent{
         if(data.data.mcol == "#"){
           data.data.mcol = "#000000";
         }
-
+        
         data.data.bg    = data.data.bg    || '#FFFFFF';
         data.data.bg    = data.data.bg.replace(/\/|\\/,'');
         data.data.ucol  = data.data.ucol  || '#000000';
@@ -478,6 +477,7 @@ export class MainComponent{
         title: "خطأ",
         message: 'اوه لا !! انقطع الاتصال'
       });
+      this.routerExtensions.back();
 
       try{
         notifications.refresh();
@@ -498,6 +498,7 @@ export class MainComponent{
         title: "خطأ",
         message: 'اوه لا !! خطأ في الاتصال'
       });
+      this.routerExtensions.back();
 
       try{
         notifications.refresh();  
@@ -518,6 +519,7 @@ export class MainComponent{
         title: "خطأ",
         message: 'اوه لا !! لا يمكنني الاتصال بالخادم'
       });
+      this.routerExtensions.back();      
 
       try{
         notifications.refresh();
@@ -538,6 +540,7 @@ export class MainComponent{
         title: "خطأ",
         message: 'انا اقوم باعادة الاتصال بالخادم الان'
       });
+      this.routerExtensions.back();
 
       try{
         notifications.refresh();
@@ -558,6 +561,7 @@ export class MainComponent{
         title: "خطأ",
         message: 'اوه لا !! حدث خطأ ما'
       });
+      this.routerExtensions.back();
 
       try{
         notifications.refresh();
@@ -635,15 +639,6 @@ export class MainComponent{
         "\n" + 
         JSON.stringify(room,null,4));
     }
-    var options = {
-        title: "Race Selection",
-        message: "Choose your race",
-        cancelButtonText: "Cancel",
-        actions: ["Human", "Elf", "Dwarf", "Orc"]
-    };
-    dialogs.action(options).then((result) => { 
-        console.log(result);
-    });
   }
 
   updateRooms (rooms?:ListView){ // refresh room online users
