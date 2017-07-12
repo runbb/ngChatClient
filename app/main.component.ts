@@ -46,9 +46,6 @@ export class MainComponent{
     this.connect.rooms = [];
     this.connect.connected.next(false);
 
-    // var notifications:ListView = <ListView> this.page.getViewById("listNotifications");
-    // notifications.refresh();
-
     this.connect.socket.on('msg', (data) => {
       this.connect.connected.next(true);
 
@@ -62,7 +59,8 @@ export class MainComponent{
             this.connect.userid = data.data.id;
             dialogs.alert({
               title: "تسجيل الدخول",
-              message: 'تم تسجيل الدخول بشكل صحيح'
+              message: 'تم تسجيل الدخول بشكل صحيح',
+              okButtonText: "حسنا"
             });
             this.router.navigate(['main']);
           break;
@@ -70,7 +68,8 @@ export class MainComponent{
             this.connect.userid = data.data.id;
             dialogs.alert({
               title: "تسجيل الدخول",
-              message: 'يرجى إختيار أسم آخر'
+              message: 'يرجى إختيار أسم آخر',
+              okButtonText: "حسنا"
             });
             this.routerExtensions.back();
           break;
@@ -78,7 +77,8 @@ export class MainComponent{
             this.connect.userid = data.data.id;
             dialogs.alert({
               title: "التسجيل",
-              message: 'هذا الإسم مسجل من قبل'
+              message: 'هذا الإسم مسجل من قبل',
+              okButtonText: "حسنا"
             });
             this.routerExtensions.back();
           break;
@@ -86,7 +86,8 @@ export class MainComponent{
             this.connect.userid = data.data.id;
             dialogs.alert({
               title: "التسجيل",
-              message: 'كلمه المرور غير مناسبه'
+              message: 'كلمه المرور غير مناسبه',
+              okButtonText: "حسنا"
             });
             this.routerExtensions.back();
           break;
@@ -94,7 +95,8 @@ export class MainComponent{
             this.connect.userid = data.data.id;
             dialogs.alert({
               title: "تسجيل الدخول",
-              message: 'كلمه المرور غير صحيحه'
+              message: 'كلمه المرور غير صحيحه',
+              okButtonText: "حسنا"              
             });
             this.routerExtensions.back();
           break;
@@ -102,7 +104,8 @@ export class MainComponent{
             this.connect.userid = data.data.id;
             dialogs.alert({
               title: "التسجيل",
-              message: 'تم تسجيل العضويه بنجاح !'
+              message: 'تم تسجيل العضويه بنجاح !',
+              okButtonText: "حسنا"              
             });
           break;
         }

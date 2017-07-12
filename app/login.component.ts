@@ -9,6 +9,8 @@ import { Observable, Subject } from 'rxjs';
 
 import { Connection } from "./services/connection";
 
+import dialogs = require("ui/dialogs");
+
 declare var NSIndexPath,UITableViewScrollPosition,unescape,android;
 
 class Message{
@@ -46,10 +48,18 @@ export class LoginComponent{
         var server:TextField = <TextField> this.page.getViewById("serverip");
         var username:TextField = <TextField> this.page.getViewById("username");
         var password:TextField = <TextField> this.page.getViewById("password");
-        var password:TextField = <TextField> this.page.getViewById("password");
 
         var listpicker:ListPicker = <ListPicker> this.page.getViewById("serverslist");
         this.connect.server = this.servers[listpicker.selectedIndex];
+        
+        if(username.text.trim() == '' || password.text.trim() == ''){
+            dialogs.alert({
+              title: "خطأ",
+              message: 'يجب عدم ترك احد الحقول فارغًا',
+              okButtonText: "حسنا"
+            });
+            return;
+        }
 
         this.connect.socket = connect(this.connect.server, <SocketOptions> { transports: ['polling', 'websocket'] });
         this.connect.socket.on('connect', () => {
