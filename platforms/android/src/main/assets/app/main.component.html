@@ -3,8 +3,8 @@
       text="ارسال اعلان" android.position="popup"></ActionItem>
 
       <GridLayout columns="auto,*">
-        <Image id="userAvatar"  col='0' [src]="connect.server + connect.user.pic" class="avatar" height="50" width="50"></Image>
-        <Button id="userTopic" col='1' [text]="connect.user.topic" (tap)="showInfo()" class="btn btn-primary"></Button>
+        <Image id="userAvatar"  col='0' class="avatar" height="50" width="50"></Image>
+        <Button id="userTopic" col='1' (tap)="showInfo()" android:class="btn btn-primary"></Button>
     </GridLayout>
 </ActionBar>
 

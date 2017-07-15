@@ -74,6 +74,7 @@ export class MainComponent{
               okButtonText: "حسنا"
             });
             this.routerExtensions.back();
+            this.connect.socket.disconnect()
           break;
           case "usedname":
             this.connect.userid = data.data.id;
@@ -83,6 +84,7 @@ export class MainComponent{
               okButtonText: "حسنا"
             });
             this.routerExtensions.back();
+            this.connect.socket.disconnect()
           break;
           case "badpass":
             this.connect.userid = data.data.id;
@@ -92,6 +94,7 @@ export class MainComponent{
               okButtonText: "حسنا"
             });
             this.routerExtensions.back();
+            this.connect.socket.disconnect()
           break;
           case "wrong":
             this.connect.userid = data.data.id;
@@ -101,6 +104,7 @@ export class MainComponent{
               okButtonText: "حسنا"              
             });
             this.routerExtensions.back();
+            this.connect.socket.disconnect()
           break;
           case "reg":
             this.connect.userid = data.data.id;
@@ -480,9 +484,11 @@ export class MainComponent{
 
       dialogs.alert({
         title: "خطأ",
-        message: 'اوه لا !! انقطع الاتصال'
+        message: 'اوه لا !! انقطع الاتصال',
+        okButtonText: 'حسنا'
       });
       this.routerExtensions.back();
+      this.connect.socket.disconnect()
 
       try{
         notifications.refresh();
@@ -501,9 +507,11 @@ export class MainComponent{
 
       dialogs.alert({
         title: "خطأ",
-        message: 'اوه لا !! خطأ في الاتصال'
+        message: 'اوه لا !! خطأ في الاتصال',
+        okButtonText: 'حسنا'
       });
       this.routerExtensions.back();
+      this.connect.socket.disconnect()
 
       try{
         notifications.refresh();  
@@ -522,9 +530,11 @@ export class MainComponent{
 
       dialogs.alert({
         title: "خطأ",
-        message: 'اوه لا !! لا يمكنني الاتصال بالخادم'
+        message: 'اوه لا !! لا يمكنني الاتصال بالخادم',
+        okButtonText: 'حسنا'
       });
-      this.routerExtensions.back();      
+      this.routerExtensions.back();
+      this.connect.socket.disconnect()      
 
       try{
         notifications.refresh();
@@ -543,9 +553,11 @@ export class MainComponent{
 
       dialogs.alert({
         title: "خطأ",
-        message: 'انا اقوم باعادة الاتصال بالخادم الان'
+        message: 'انا اقوم باعادة الاتصال بالخادم الان',
+        okButtonText: 'حسنا'
       });
       this.routerExtensions.back();
+      this.connect.socket.disconnect()
 
       try{
         notifications.refresh();
@@ -564,9 +576,11 @@ export class MainComponent{
 
       dialogs.alert({
         title: "خطأ",
-        message: 'اوه لا !! حدث خطأ ما'
+        message: 'اوه لا !! حدث خطأ ما',
+        okButtonText: 'حسنا'
       });
       this.routerExtensions.back();
+      this.connect.socket.disconnect()
 
       try{
         notifications.refresh();
