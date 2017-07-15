@@ -7,3 +7,8 @@
 image{
     background-color: transparent;
 }
+
+.avatar{
+    background: white;
+    border-radius: 50px;
+}

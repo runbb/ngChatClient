@@ -5,6 +5,8 @@ import { connect,SocketOptions } from "nativescript-socket.io";
 import { Page } from "ui/page";
 import { ListView } from "ui/list-view";
 import { TextField } from "ui/text-field";
+import { Image } from "ui/image";
+import { Button } from "ui/button";
 import { TabViewItem } from "ui/tab-view";
 import { setTimeout , clearTimeout } from 'timer';
 import { Observable, Subject } from 'rxjs';
@@ -621,7 +623,21 @@ export class MainComponent{
 
   showInfo(id?:string){ // show user information
     if(typeof id != "string"){
-        alert(JSON.stringify(this.connect.user,null,4) + "\n" + JSON.stringify(this.connect.room,null,4));
+        dialogs.action({
+          cancelable: true,
+          cancelButtonText: "الغاء",
+          title: this.connect.user.topic,
+          actions: [
+            'معلوماتي',
+            'تسجيل الخروج'
+          ]
+        }).then(result => {
+          if(result == 'معلوماتي'){
+            alert(JSON.stringify(this.connect.user,null,4));
+          }else if(result == 'تسجيل الخروج'){
+            this.connect.socket.emit('msg', {cmd: 'logout', data: {}});
+          }
+        })
     }else{
         var user = this.connect.users.filter(v=> v.id == id)[0];
         var room;
@@ -667,8 +683,16 @@ export class MainComponent{
     }
 
     this.connect.user = this.connect.users.filter((value,index) => value.id == this.connect.userid)[0];
-    this.connect.room = this.connect.rooms.filter(v => v.id == this.connect.user)[0];
+    if(this.connect.user){
+      this.connect.room = this.connect.rooms.filter(v => v.id == this.connect.user.roomid)[0];
+    }
+    if(this.connect.user){
+      var useravatar:Image = <Image> this.page.getViewById("userAvatar");
+      var usertopic:Button = <Button> this.page.getViewById("userTopic");
 
+      useravatar.src = this.connect.server + this.connect.user.pic;
+      usertopic.text = this.connect.user.topic;
+    }
 
     this.connect.users.sort((a, b) => {
       if(b.rep == undefined || b.rep == undefined){
