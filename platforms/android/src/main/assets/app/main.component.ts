@@ -9,8 +9,6 @@ import { Image } from "ui/image";
 import { Button } from "ui/button";
 import { TabViewItem } from "ui/tab-view";
 import { setTimeout , clearTimeout } from 'timer';
-import { Observable, Subject } from 'rxjs';
-
 import { Connection } from "./services/connection";
 
 import * as application from "application";
