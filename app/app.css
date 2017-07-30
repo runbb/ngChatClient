@@ -9,5 +9,16 @@ image{
 }
 
 .avatar{
+    border-radius: 50vh;
+    border-width: 3px;
+    border-style: solid;
+    border-color: #d9534f;
+    width: 50;
+    height: 50;
+    margin-right: 3px;
+    margin-left: 3px;
+}
+
+.avatar{
     background: white;
 }

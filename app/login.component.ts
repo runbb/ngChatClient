@@ -88,8 +88,12 @@ export class LoginComponent{
             }
         });
 
-        this.connect.socket.on('error', () => {
-            this.router.navigate(['']);
+        this.connect.socket.on('error', (err) => {
+            dialogs.alert({
+              title: "خطأ",
+              message: err,
+              okButtonText: "حسنا"
+            });
         });
     }
 }

@@ -5,7 +5,7 @@ import { ListView } from "ui/list-view";
 import { TextField } from "ui/text-field";
 import { TabViewItem } from "ui/tab-view";
 import { setTimeout } from 'timer';
-import { Observable, Subject } from 'rxjs';
+import { Observable, Subject, BehaviorSubject } from 'rxjs';
 
 import * as application from "application";
 import * as platform from "platform";
@@ -38,6 +38,7 @@ export class Connection {
   public rooms: Array<any>;
   public room: any;
   public powers: Array<any>;
+  public lengthUsers: BehaviorSubject<number> = new BehaviorSubject<number>(0);
   public server: string = "";
 
   public socket;

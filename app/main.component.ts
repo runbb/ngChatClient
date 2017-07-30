@@ -245,9 +245,7 @@ export class MainComponent{
         var rooms:ListView = <ListView> this.page.getViewById("listRooms");
         
         var sico = '';
-        var power = this.connect.powers.filter(value => {
-            return value.name == data.data.power;
-        })[0];
+        var power = this.connect.powers.filter(v => v.name == data.data.power)[0];
 
         if(power){
           if(power.ico != ''){
@@ -290,7 +288,6 @@ export class MainComponent{
       if(data.cmd == "u^"){ // user edit
         var onlines:ListView = <ListView> this.page.getViewById("listOnline");
         var rooms:ListView = <ListView> this.page.getViewById("listRooms");
-        this.connect.users.splice(this.connect.users.indexOf(this.connect.users.filter(v => v.id == data.data.id)[0]), 1);
         var sico = '';
         var power = this.connect.powers.filter(value => {
             return value.name == data.data.power;
@@ -326,8 +323,7 @@ export class MainComponent{
         data.data.dico = data.data.ico != '' ? this.connect.server + "dro3/" + data.data.ico : '';
 
         data.data.sico  = sico;
-
-        this.connect.users.push(data.data);
+        this.connect.users[this.connect.users.indexOf(this.connect.users.filter(v => v.id == data.data.id)[0])] = data.data;
         try{
           onlines.refresh();
           rooms.refresh();
@@ -638,7 +634,7 @@ export class MainComponent{
         dialogs.action({
           cancelable: true,
           cancelButtonText: "الغاء",
-          title: this.connect.user.topic,
+          title: (this.connect.user || { topic: '' }).topic,
           actions: [
             'معلوماتي',
             'تسجيل الخروج'
@@ -651,24 +647,31 @@ export class MainComponent{
           }
         })
     }else{
-        var user = this.connect.users.filter(v=> v.id == id)[0];
-        var room;
-        if(user){
-          room = this.connect.rooms.filter(v=> v.id == user.roomid)[0];
-        }else{
-          room = this.connect.rooms[0];          
-        }
+        let user = this.connect.users.filter(v=> v.id == id)[0];
 
         if(user == undefined){
           dialogs.alert({
             title: "تنبيه",
-            message: "العضو غير موجود الان"
+            message: "العضو غير موجود الان",
+            okButtonText: "حسنا"
           });
         }
-
-        alert(JSON.stringify(user,null,4) + 
-        "\n" + 
-        JSON.stringify(room,null,4));
+        
+        dialogs.action({
+          cancelable: true,
+          cancelButtonText: "الغاء",
+          title: (user || { topic: '' }).topic,
+          actions: [
+            'الملف الشخصي',
+            'إعجاب'
+          ]
+        }).then(result => {
+          if(result == 'الملف الشخصي'){
+            alert(JSON.stringify(user,null,4));
+          }else if(result == 'إعجاب'){
+            this.connect.socket.emit('action', {cmd: 'like', data: { id: user.id }});
+          }
+        });
     }
   }
 
@@ -689,10 +692,12 @@ export class MainComponent{
     }catch(e){}
   }
 
-  updateUsers (users?:ListView){ // refresh room online users
+  updateUsers (users?: ListView){ // refresh room online users
     if(users == null){
       users = <ListView> this.page.getViewById("listOnline");      
     }
+
+    this.connect.lengthUsers.next(this.connect.users.length);
 
     this.connect.user = this.connect.users.filter((value,index) => value.id == this.connect.userid)[0];
     if(this.connect.user){
